@@ -1,15 +1,24 @@
 -- SHOPGRAB DATA WAREHOUSE ETL
 -- STEP 9: INITIAL (FULL) LOAD
--- Requires 06_create_warehouse_tables.sql and 08_create_staging_views.sql to
--- have been run first. Reads only from the VW_STG_* staging views, never
--- straight from the OLTP tables.
+-- Requires 06_create_warehouse_tables.sql, _create_staging_schema.sql, and
+-- 08_create_staging_views.sql to have been run first.
+-- Reads only from the VW_STG_* staging views, never straight from OLTP.
 --
--- This is the first, one-time bulk historical load: dimensions are loaded
--- with MERGE / SCD2 (already safe to re-run), and FACT_ORDER_SALES is
--- cleared and reloaded from scratch every run. For ongoing operation after
--- this first load, use 10_incremental_load.sql instead, which loads the
--- same dimensions but only inserts new fact rows rather than reloading
--- everything.
+-- DATA QUALITY strategy (two layers):
+--   Layer 1 (view-level)  : 08_create_staging_views.sql already filters out
+--                           structurally invalid rows (NULL PKs, bad email,
+--                           out-of-range values, future dates). Only clean
+--                           rows reach this script.
+--   Layer 2 (load-level)  : Each SCD2 PL/SQL block re-checks business rules
+--                           (belt-and-suspenders), skips any row still
+--                           failing, and logs it to ETL_REJECTED_ROWS with a
+--                           validation_rule code. The outer loop never aborts
+--                           on a single bad row -- an inner BEGIN...EXCEPTION
+--                           block catches DB-level errors, rolls back only
+--                           that row via SAVEPOINT, and logs the error.
+--
+-- This is the one-time bulk historical load. For ongoing operation use
+-- 10_incremental_load.sql instead.
 
 SET DEFINE OFF;
 SET SERVEROUTPUT ON;
@@ -17,9 +26,7 @@ ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD';
 
 -- ============================================================================
 -- PART 1: DIM_DATE
--- Not sourced from a staging view -- there is no OLTP "date" table. Generates
--- every calendar date from 2016-01-01 to 2026-12-31, covering the full
--- order_datetime range the OLTP data can produce.
+-- Generated from 2016-01-01 to 2026-12-31; skips already-loaded dates.
 -- ============================================================================
 PROMPT ======= Loading DIM_DATE... =======;
 INSERT INTO dim_date (
@@ -62,69 +69,37 @@ COMMIT;
 
 -- ============================================================================
 -- PART 2: DIM_MEMBER (SCD Type 2), source: VW_STG_MEMBER
+--
+-- Validation (belt-and-suspenders over the view's WHERE filters):
+--   - member_id, full_name, email, member_type, member_status must be non-NULL
+--   - member_status must be ACTIVE / INACTIVE / SUSPENDED
+-- Rejected rows logged to ETL_REJECTED_ROWS; loop continues on error.
+-- NVL() used in change detection to handle NULL transitions correctly.
 -- ============================================================================
 PROMPT ======= Loading DIM_MEMBER (SCD2)... =======;
-DECLARE
-    v_exists  NUMBER;
-    v_changed NUMBER;
-BEGIN
-    FOR r IN (SELECT * FROM vw_stg_member) LOOP
-        SELECT COUNT(*) INTO v_exists
-        FROM dim_member
-        WHERE member_id = r.member_id AND current_flag = 'Y';
+EXEC sp_sync_dim_member;
 
-        IF v_exists = 0 THEN
-            INSERT INTO dim_member (
-                member_key, member_id, full_name, email, member_type, member_status,
-                effective_date, expiry_date, current_flag
-            ) VALUES (
-                dim_member_seq.NEXTVAL, r.member_id, r.full_name, r.email,
-                r.member_type, r.member_status,
-                r.registration_date, DATE '9999-12-31', 'Y'
-            );
-        ELSE
-            SELECT COUNT(*) INTO v_changed
-            FROM dim_member
-            WHERE member_id = r.member_id AND current_flag = 'Y'
-              AND (full_name <> r.full_name
-                   OR email <> r.email
-                   OR member_type <> r.member_type
-                   OR member_status <> r.member_status);
-
-            IF v_changed > 0 THEN
-                UPDATE dim_member
-                   SET expiry_date = TRUNC(SYSDATE) - 1,
-                       current_flag = 'N'
-                 WHERE member_id = r.member_id AND current_flag = 'Y';
-
-                INSERT INTO dim_member (
-                    member_key, member_id, full_name, email, member_type, member_status,
-                    effective_date, expiry_date, current_flag
-                ) VALUES (
-                    dim_member_seq.NEXTVAL, r.member_id, r.full_name, r.email,
-                    r.member_type, r.member_status,
-                    TRUNC(SYSDATE), DATE '9999-12-31', 'Y'
-                );
-            END IF;
-        END IF;
-    END LOOP;
-    COMMIT;
-END;
-/
 
 -- ============================================================================
--- PART 3: DIM_RESTAURANT (no history columns), source: VW_STG_RESTAURANT
+-- PART 3: DIM_RESTAURANT, source: VW_STG_RESTAURANT
+-- MERGE (SCD Type 1). View already filters invalid rows; MERGE USING adds a
+-- final guard on rating range as a safety net.
 -- ============================================================================
 PROMPT ======= Loading DIM_RESTAURANT... =======;
 MERGE INTO dim_restaurant tgt
-USING vw_stg_restaurant src
+USING (
+    SELECT * FROM vw_stg_restaurant
+    WHERE restaurant_id   IS NOT NULL
+      AND restaurant_name IS NOT NULL
+      AND rating BETWEEN 0 AND 5
+) src
 ON (tgt.restaurant_id = src.restaurant_id)
 WHEN MATCHED THEN UPDATE SET
     tgt.restaurant_name = src.restaurant_name,
-    tgt.category = src.category,
-    tgt.halal_status = src.halal_status,
-    tgt.rating = src.rating,
-    tgt.location_area = src.location_area
+    tgt.category        = src.category,
+    tgt.halal_status    = src.halal_status,
+    tgt.rating          = src.rating,
+    tgt.location_area   = src.location_area
 WHEN NOT MATCHED THEN INSERT (
     restaurant_key, restaurant_id, restaurant_name, category, halal_status, rating, location_area
 ) VALUES (
@@ -133,73 +108,30 @@ WHEN NOT MATCHED THEN INSERT (
 );
 COMMIT;
 
--- ============================================================================
--- PART 4: DIM_MENU_ITEM (SCD Type 2), source: VW_STG_MENU_ITEM
--- menu_item has no "date created" column in OLTP, so a brand-new item's
--- Effective_Date uses a fixed epoch (2000-01-01) that predates every order.
--- ============================================================================
 PROMPT ======= Loading DIM_MENU_ITEM (SCD2)... =======;
-DECLARE
-    v_exists  NUMBER;
-    v_changed NUMBER;
-BEGIN
-    FOR r IN (SELECT * FROM vw_stg_menu_item) LOOP
-        SELECT COUNT(*) INTO v_exists
-        FROM dim_menu_item
-        WHERE item_id = r.item_id AND current_flag = 'Y';
+EXEC sp_sync_dim_menu_item;
 
-        IF v_exists = 0 THEN
-            INSERT INTO dim_menu_item (
-                item_key, item_id, item_name, item_category, item_type,
-                budget_meal, super_deal, effective_date, expiry_date, current_flag
-            ) VALUES (
-                dim_menu_seq.NEXTVAL, r.item_id, r.item_name, r.item_category, r.item_type,
-                r.budget_meal, r.super_deal, DATE '2000-01-01', DATE '9999-12-31', 'Y'
-            );
-        ELSE
-            SELECT COUNT(*) INTO v_changed
-            FROM dim_menu_item
-            WHERE item_id = r.item_id AND current_flag = 'Y'
-              AND (item_name <> r.item_name
-                   OR item_category <> r.item_category
-                   OR item_type <> r.item_type
-                   OR budget_meal <> r.budget_meal
-                   OR super_deal <> r.super_deal);
-
-            IF v_changed > 0 THEN
-                UPDATE dim_menu_item
-                   SET expiry_date = TRUNC(SYSDATE) - 1,
-                       current_flag = 'N'
-                 WHERE item_id = r.item_id AND current_flag = 'Y';
-
-                INSERT INTO dim_menu_item (
-                    item_key, item_id, item_name, item_category, item_type,
-                    budget_meal, super_deal, effective_date, expiry_date, current_flag
-                ) VALUES (
-                    dim_menu_seq.NEXTVAL, r.item_id, r.item_name, r.item_category, r.item_type,
-                    r.budget_meal, r.super_deal, TRUNC(SYSDATE), DATE '9999-12-31', 'Y'
-                );
-            END IF;
-        END IF;
-    END LOOP;
-    COMMIT;
-END;
-/
 
 -- ============================================================================
--- PART 5: DIM_VOUCHER, source: VW_STG_VOUCHER, + sentinel row
--- Voucher_Key = -1 stands in for orders placed without a voucher, since
--- Fact_Order_Sales.Voucher_Key is NOT NULL.
+-- PART 5: DIM_VOUCHER, source: VW_STG_VOUCHER
+-- MERGE + sentinel row (voucher_key = -1 for orders with no voucher).
+-- USING clause guards: non-NULL voucher_id + non-negative amounts.
 -- ============================================================================
 PROMPT ======= Loading DIM_VOUCHER... =======;
 MERGE INTO dim_voucher tgt
-USING vw_stg_voucher src
+USING (
+    SELECT * FROM vw_stg_voucher
+    WHERE voucher_id              IS NOT NULL
+      AND voucher_code            IS NOT NULL
+      AND NVL(discount_amount, 0) >= 0
+      AND NVL(minimum_order, 0)   >= 0
+) src
 ON (tgt.voucher_id = src.voucher_id)
 WHEN MATCHED THEN UPDATE SET
-    tgt.voucher_code = src.voucher_code,
-    tgt.voucher_type = src.voucher_type,
+    tgt.voucher_code    = src.voucher_code,
+    tgt.voucher_type    = src.voucher_type,
     tgt.discount_amount = src.discount_amount,
-    tgt.minimum_order = src.minimum_order
+    tgt.minimum_order   = src.minimum_order
 WHEN NOT MATCHED THEN INSERT (
     voucher_key, voucher_id, voucher_code, voucher_type, discount_amount, minimum_order
 ) VALUES (
@@ -207,6 +139,7 @@ WHEN NOT MATCHED THEN INSERT (
     src.discount_amount, src.minimum_order
 );
 
+-- Sentinel row: orders placed without a voucher point here
 MERGE INTO dim_voucher tgt
 USING (SELECT -1 AS voucher_id FROM dual) src
 ON (tgt.voucher_id = src.voucher_id)
@@ -218,16 +151,22 @@ WHEN NOT MATCHED THEN INSERT (
 COMMIT;
 
 -- ============================================================================
--- PART 6: DIM_DELIVERY_COMPANY, source: VW_STG_DELIVERY_COMPANY, + sentinel
--- Delivery_Company_Key = -1 stands in for PICKUP orders (no delivery record).
+-- PART 6: DIM_DELIVERY_COMPANY, source: VW_STG_DELIVERY_COMPANY
+-- MERGE + sentinel row (delivery_company_key = -1 for pickup orders).
+-- USING clause guards: non-NULL id/name + non-negative base_fee.
 -- ============================================================================
 PROMPT ======= Loading DIM_DELIVERY_COMPANY... =======;
 MERGE INTO dim_delivery_company tgt
-USING vw_stg_delivery_company src
+USING (
+    SELECT * FROM vw_stg_delivery_company
+    WHERE delivery_company_id IS NOT NULL
+      AND company_name        IS NOT NULL
+      AND NVL(base_fee, 0)   >= 0
+) src
 ON (tgt.delivery_company_id = src.delivery_company_id)
 WHEN MATCHED THEN UPDATE SET
-    tgt.company_name = src.company_name,
-    tgt.base_fee = src.base_fee,
+    tgt.company_name   = src.company_name,
+    tgt.base_fee       = src.base_fee,
     tgt.service_status = src.service_status
 WHEN NOT MATCHED THEN INSERT (
     delivery_company_key, delivery_company_id, company_name, base_fee, service_status
@@ -235,6 +174,7 @@ WHEN NOT MATCHED THEN INSERT (
     dim_del_seq.NEXTVAL, src.delivery_company_id, src.company_name, src.base_fee, src.service_status
 );
 
+-- Sentinel row: pickup orders (no delivery record) point here
 MERGE INTO dim_delivery_company tgt
 USING (SELECT -1 AS delivery_company_id FROM dual) src
 ON (tgt.delivery_company_id = src.delivery_company_id)
@@ -247,12 +187,15 @@ COMMIT;
 
 -- ============================================================================
 -- PART 7: DIM_PAYMENT, source: VW_STG_PAYMENT
--- Grain = one row per OLTP payment record (payment_id is 1:1 with
--- customer_order.order_id), not a deduplicated method/status combo.
+-- MERGE. USING clause guards: non-NULL payment_id and payment_method.
 -- ============================================================================
 PROMPT ======= Loading DIM_PAYMENT... =======;
 MERGE INTO dim_payment tgt
-USING vw_stg_payment src
+USING (
+    SELECT * FROM vw_stg_payment
+    WHERE payment_id     IS NOT NULL
+      AND payment_method IS NOT NULL
+) src
 ON (tgt.payment_id = src.payment_id)
 WHEN MATCHED THEN UPDATE SET
     tgt.payment_method = src.payment_method,
@@ -266,7 +209,9 @@ COMMIT;
 
 -- ============================================================================
 -- PART 8: FACT_ORDER_SALES, source: VW_STG_ORDER_SALES
--- Full DELETE + INSERT -- this is the one-time bulk historical load.
+-- Full DELETE + INSERT -- one-time bulk historical load.
+-- USING subquery adds final guards: quantity > 0, non-NULL date, valid date
+-- range, non-negative financials.
 -- ============================================================================
 PROMPT ======= Clearing FACT_ORDER_SALES for full reload... =======;
 DELETE FROM fact_order_sales;
@@ -309,12 +254,18 @@ LEFT JOIN dim_voucher dv
 LEFT JOIN dim_delivery_company ddc
     ON ddc.delivery_company_id = s.delivery_company_id
 JOIN dim_payment dp
-    ON dp.payment_id = s.payment_id;
+    ON dp.payment_id = s.payment_id
+-- Final safety-net guards on the resolved fact rows
+WHERE s.quantity           > 0
+  AND s.unit_price         >= 0
+  AND s.subtotal           >= 0
+  AND s.order_datetime     IS NOT NULL
+  AND TRUNC(s.order_datetime) BETWEEN DATE '2016-01-01' AND DATE '2026-12-31';
 
 COMMIT;
 
 -- ============================================================================
--- PART 9: LOAD SUMMARY
+-- PART 9: LOAD SUMMARY + INTEGRITY CHECKS
 -- ============================================================================
 PROMPT;
 PROMPT ======= INITIAL LOAD COMPLETE =======;
@@ -322,16 +273,25 @@ PROMPT Row counts:;
 
 SELECT RPAD(table_name, 25) || ' | ' || LPAD(TO_CHAR(row_count), 8) AS summary
 FROM (
-    SELECT 'DIM_DATE' AS table_name, COUNT(*) AS row_count FROM dim_date
-    UNION ALL SELECT 'DIM_MEMBER', COUNT(*) FROM dim_member
-    UNION ALL SELECT 'DIM_RESTAURANT', COUNT(*) FROM dim_restaurant
-    UNION ALL SELECT 'DIM_MENU_ITEM', COUNT(*) FROM dim_menu_item
-    UNION ALL SELECT 'DIM_VOUCHER', COUNT(*) FROM dim_voucher
-    UNION ALL SELECT 'DIM_DELIVERY_COMPANY', COUNT(*) FROM dim_delivery_company
-    UNION ALL SELECT 'DIM_PAYMENT', COUNT(*) FROM dim_payment
-    UNION ALL SELECT 'FACT_ORDER_SALES', COUNT(*) FROM fact_order_sales
+    SELECT 'DIM_DATE'             AS table_name, COUNT(*) AS row_count FROM dim_date
+    UNION ALL SELECT 'DIM_MEMBER',          COUNT(*) FROM dim_member
+    UNION ALL SELECT 'DIM_RESTAURANT',      COUNT(*) FROM dim_restaurant
+    UNION ALL SELECT 'DIM_MENU_ITEM',       COUNT(*) FROM dim_menu_item
+    UNION ALL SELECT 'DIM_VOUCHER',         COUNT(*) FROM dim_voucher
+    UNION ALL SELECT 'DIM_DELIVERY_COMPANY',COUNT(*) FROM dim_delivery_company
+    UNION ALL SELECT 'DIM_PAYMENT',         COUNT(*) FROM dim_payment
+    UNION ALL SELECT 'FACT_ORDER_SALES',    COUNT(*) FROM fact_order_sales
     ORDER BY 1
 );
+
+PROMPT;
+PROMPT ======= ETL REJECT SUMMARY =======;
+SELECT RPAD(source_name, 15) || ' | rejected: ' || LPAD(TO_CHAR(SUM(rejected_count)), 6)
+       || '  valid: ' || LPAD(TO_CHAR(SUM(valid_count)), 6) AS reject_summary
+FROM etl_batch_control
+WHERE processed_date >= TRUNC(SYSDATE)
+GROUP BY source_name
+ORDER BY source_name;
 
 PROMPT;
 PROMPT ======= INTEGRITY CHECKS (all should be 0) =======;

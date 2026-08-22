@@ -34,60 +34,11 @@ ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD';
 
 -- ============================================================================
 -- PART 1: DIM_MEMBER (SCD Type 2), source: VW_STG_MEMBER
+-- Logic lives in sp_sync_dim_member (8_stored_procs.sql).
 -- ============================================================================
 PROMPT ======= Syncing DIM_MEMBER (SCD2)... =======;
-DECLARE
-    v_exists  NUMBER;
-    v_changed NUMBER;
-    v_new NUMBER := 0;
-    v_upd NUMBER := 0;
-BEGIN
-    FOR r IN (SELECT * FROM vw_stg_member) LOOP
-        SELECT COUNT(*) INTO v_exists
-        FROM dim_member
-        WHERE member_id = r.member_id AND current_flag = 'Y';
+EXEC sp_sync_dim_member;
 
-        IF v_exists = 0 THEN
-            INSERT INTO dim_member (
-                member_key, member_id, full_name, email, member_type, member_status,
-                effective_date, expiry_date, current_flag
-            ) VALUES (
-                dim_member_seq.NEXTVAL, r.member_id, r.full_name, r.email,
-                r.member_type, r.member_status,
-                r.registration_date, DATE '9999-12-31', 'Y'
-            );
-            v_new := v_new + 1;
-        ELSE
-            SELECT COUNT(*) INTO v_changed
-            FROM dim_member
-            WHERE member_id = r.member_id AND current_flag = 'Y'
-              AND (full_name <> r.full_name
-                   OR email <> r.email
-                   OR member_type <> r.member_type
-                   OR member_status <> r.member_status);
-
-            IF v_changed > 0 THEN
-                UPDATE dim_member
-                   SET expiry_date = TRUNC(SYSDATE) - 1,
-                       current_flag = 'N'
-                 WHERE member_id = r.member_id AND current_flag = 'Y';
-
-                INSERT INTO dim_member (
-                    member_key, member_id, full_name, email, member_type, member_status,
-                    effective_date, expiry_date, current_flag
-                ) VALUES (
-                    dim_member_seq.NEXTVAL, r.member_id, r.full_name, r.email,
-                    r.member_type, r.member_status,
-                    TRUNC(SYSDATE), DATE '9999-12-31', 'Y'
-                );
-                v_upd := v_upd + 1;
-            END IF;
-        END IF;
-    END LOOP;
-    COMMIT;
-    DBMS_OUTPUT.PUT_LINE('DIM_MEMBER: ' || v_new || ' new, ' || v_upd || ' changed (new SCD2 version), rest unchanged.');
-END;
-/
 
 -- ============================================================================
 -- PART 2: DIM_RESTAURANT, source: VW_STG_RESTAURANT
@@ -117,59 +68,11 @@ COMMIT;
 
 -- ============================================================================
 -- PART 3: DIM_MENU_ITEM (SCD Type 2), source: VW_STG_MENU_ITEM
+-- Logic lives in sp_sync_dim_menu_item (8_stored_procs.sql).
 -- ============================================================================
 PROMPT ======= Syncing DIM_MENU_ITEM (SCD2)... =======;
-DECLARE
-    v_exists  NUMBER;
-    v_changed NUMBER;
-    v_new NUMBER := 0;
-    v_upd NUMBER := 0;
-BEGIN
-    FOR r IN (SELECT * FROM vw_stg_menu_item) LOOP
-        SELECT COUNT(*) INTO v_exists
-        FROM dim_menu_item
-        WHERE item_id = r.item_id AND current_flag = 'Y';
+EXEC sp_sync_dim_menu_item;
 
-        IF v_exists = 0 THEN
-            INSERT INTO dim_menu_item (
-                item_key, item_id, item_name, item_category, item_type,
-                budget_meal, super_deal, effective_date, expiry_date, current_flag
-            ) VALUES (
-                dim_menu_seq.NEXTVAL, r.item_id, r.item_name, r.item_category, r.item_type,
-                r.budget_meal, r.super_deal, DATE '2000-01-01', DATE '9999-12-31', 'Y'
-            );
-            v_new := v_new + 1;
-        ELSE
-            SELECT COUNT(*) INTO v_changed
-            FROM dim_menu_item
-            WHERE item_id = r.item_id AND current_flag = 'Y'
-              AND (item_name <> r.item_name
-                   OR item_category <> r.item_category
-                   OR item_type <> r.item_type
-                   OR budget_meal <> r.budget_meal
-                   OR super_deal <> r.super_deal);
-
-            IF v_changed > 0 THEN
-                UPDATE dim_menu_item
-                   SET expiry_date = TRUNC(SYSDATE) - 1,
-                       current_flag = 'N'
-                 WHERE item_id = r.item_id AND current_flag = 'Y';
-
-                INSERT INTO dim_menu_item (
-                    item_key, item_id, item_name, item_category, item_type,
-                    budget_meal, super_deal, effective_date, expiry_date, current_flag
-                ) VALUES (
-                    dim_menu_seq.NEXTVAL, r.item_id, r.item_name, r.item_category, r.item_type,
-                    r.budget_meal, r.super_deal, TRUNC(SYSDATE), DATE '9999-12-31', 'Y'
-                );
-                v_upd := v_upd + 1;
-            END IF;
-        END IF;
-    END LOOP;
-    COMMIT;
-    DBMS_OUTPUT.PUT_LINE('DIM_MENU_ITEM: ' || v_new || ' new, ' || v_upd || ' changed (new SCD2 version), rest unchanged.');
-END;
-/
 
 -- ============================================================================
 -- PART 4: DIM_VOUCHER, source: VW_STG_VOUCHER
