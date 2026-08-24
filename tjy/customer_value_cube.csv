@@ -1,0 +1,198 @@
+2016,NORMAL,"Beverage House",22,2286.2,103.92
+2016,NORMAL,"Chinese Cuisine",77,6694.53,86.94
+2016,NORMAL,"Dessert Cafe",69,6596.15,95.6
+2016,NORMAL,"Fast Food Express",84,9323.56,110.99
+2016,NORMAL,"Indian Cuisine",88,11295.84,128.36
+2016,NORMAL,"Japanese Bento",63,7722.98,122.59
+2016,NORMAL,"Korean Street Food",59,5511.77,93.42
+2016,NORMAL,"Malay Cuisine",59,5881.07,99.68
+2016,NORMAL,"Thai Kitchen",67,6926.17,103.38
+2016,NORMAL,"Western Grill",52,5896.68,113.4
+2016,VIP,"Beverage House",40,4839,120.98
+2016,VIP,"Chinese Cuisine",27,2479.88,91.85
+2016,VIP,"Dessert Cafe",15,1759.3,117.29
+2016,VIP,"Fast Food Express",17,1950.22,114.72
+2016,VIP,"Indian Cuisine",21,2844.99,135.48
+2016,VIP,"Japanese Bento",23,3830.68,166.55
+2016,VIP,"Korean Street Food",55,6361.59,115.67
+2016,VIP,"Malay Cuisine",33,4662.24,141.28
+2016,VIP,"Thai Kitchen",25,2216.04,88.64
+2016,VIP,"Western Grill",30,3648.79,121.63
+2017,NORMAL,"Beverage House",25,2975,119
+2017,NORMAL,"Chinese Cuisine",63,5550.06,88.1
+2017,NORMAL,"Dessert Cafe",69,5915.02,85.72
+2017,NORMAL,"Fast Food Express",71,6818.83,96.04
+2017,NORMAL,"Indian Cuisine",74,9537.8,128.89
+2017,NORMAL,"Japanese Bento",74,11200.55,151.36
+2017,NORMAL,"Korean Street Food",53,5132.77,96.84
+2017,NORMAL,"Malay Cuisine",57,5526.06,96.95
+2017,NORMAL,"Thai Kitchen",60,6026.66,100.44
+2017,NORMAL,"Western Grill",44,5207.52,118.35
+2017,VIP,"Beverage House",45,4792.7,106.5
+2017,VIP,"Chinese Cuisine",28,1963.86,70.14
+2017,VIP,"Dessert Cafe",6,724.7,120.78
+2017,VIP,"Fast Food Express",7,807.16,115.31
+2017,VIP,"Indian Cuisine",12,1116.91,93.08
+2017,VIP,"Japanese Bento",14,1743.36,124.53
+2017,VIP,"Korean Street Food",39,4083,104.69
+2017,VIP,"Malay Cuisine",35,4464.54,127.56
+2017,VIP,"Thai Kitchen",29,3589.74,123.78
+2017,VIP,"Western Grill",41,4620.8,112.7
+2018,NORMAL,"Beverage House",29,3210,110.69
+2018,NORMAL,"Chinese Cuisine",42,3582.71,85.3
+2018,NORMAL,"Dessert Cafe",37,3547.1,95.87
+2018,NORMAL,"Fast Food Express",27,2632.44,97.5
+2018,NORMAL,"Indian Cuisine",35,5076.19,145.03
+2018,NORMAL,"Japanese Bento",14,1804.02,128.86
+2018,NORMAL,"Korean Street Food",40,3676.1,91.9
+2018,NORMAL,"Malay Cuisine",18,2068.88,114.94
+2018,NORMAL,"Thai Kitchen",37,3985.21,107.71
+2018,NORMAL,"Western Grill",47,5651.47,120.24
+2018,VIP,"Beverage House",12,1117.3,93.11
+2018,VIP,"Chinese Cuisine",2,238.74,119.37
+2018,VIP,"Dessert Cafe",3,409.4,136.47
+2018,VIP,"Fast Food Express",1,48.6,48.6
+2018,VIP,"Indian Cuisine",3,230,76.67
+2018,VIP,"Japanese Bento",3,276.6,92.2
+2018,VIP,"Korean Street Food",5,445.4,89.08
+2018,VIP,"Malay Cuisine",6,780.94,130.16
+2018,VIP,"Thai Kitchen",7,856.3,122.33
+2018,VIP,"Western Grill",5,422.47,84.49
+2019,NORMAL,"Beverage House",24,2158.1,89.92
+2019,NORMAL,"Chinese Cuisine",45,4018.65,89.3
+2019,NORMAL,"Dessert Cafe",67,6804.77,101.56
+2019,NORMAL,"Fast Food Express",62,6333.45,102.15
+2019,NORMAL,"Indian Cuisine",54,6959.53,128.88
+2019,NORMAL,"Japanese Bento",59,7925.6,134.33
+2019,NORMAL,"Korean Street Food",40,3588.54,89.71
+2019,NORMAL,"Malay Cuisine",54,5232.21,96.89
+2019,NORMAL,"Thai Kitchen",67,6953.68,103.79
+2019,NORMAL,"Western Grill",58,6800.81,117.26
+2019,VIP,"Beverage House",21,2700.8,128.61
+2019,VIP,"Chinese Cuisine",6,564.74,94.12
+2019,VIP,"Dessert Cafe",11,1346.1,122.37
+2019,VIP,"Fast Food Express",6,609.08,101.51
+2019,VIP,"Indian Cuisine",9,1365.4,151.71
+2019,VIP,"Japanese Bento",15,2430.7,162.05
+2019,VIP,"Korean Street Food",17,1701.3,100.08
+2019,VIP,"Malay Cuisine",15,1896.77,126.45
+2019,VIP,"Thai Kitchen",13,1580,121.54
+2019,VIP,"Western Grill",11,1532.08,139.28
+2020,NORMAL,"Beverage House",16,1664.1,104.01
+2020,NORMAL,"Chinese Cuisine",27,2173.19,80.49
+2020,NORMAL,"Dessert Cafe",33,3251.26,98.52
+2020,NORMAL,"Fast Food Express",29,3184.5,109.81
+2020,NORMAL,"Indian Cuisine",32,4144.8,129.53
+2020,NORMAL,"Japanese Bento",26,3604.56,138.64
+2020,NORMAL,"Korean Street Food",22,2015.2,91.6
+2020,NORMAL,"Malay Cuisine",24,2513.06,104.71
+2020,NORMAL,"Thai Kitchen",13,1296,99.69
+2020,NORMAL,"Western Grill",34,3571.11,105.03
+2020,VIP,"Beverage House",14,1424.5,101.75
+2020,VIP,"Chinese Cuisine",5,441.5,88.3
+2020,VIP,"Dessert Cafe",6,504.4,84.07
+2020,VIP,"Fast Food Express",4,266.18,66.55
+2020,VIP,"Indian Cuisine",5,449.2,89.84
+2020,VIP,"Japanese Bento",6,646.9,107.82
+2020,VIP,"Korean Street Food",13,1260.83,96.99
+2020,VIP,"Malay Cuisine",8,842,105.25
+2020,VIP,"Thai Kitchen",8,727.36,90.92
+2020,VIP,"Western Grill",5,520.65,104.13
+2021,NORMAL,"Beverage House",10,1486.8,148.68
+2021,NORMAL,"Chinese Cuisine",9,801.53,89.06
+2021,NORMAL,"Dessert Cafe",16,1779.43,111.21
+2021,NORMAL,"Fast Food Express",25,2297.66,91.91
+2021,NORMAL,"Indian Cuisine",19,2529.8,133.15
+2021,NORMAL,"Japanese Bento",16,1981.3,123.83
+2021,NORMAL,"Korean Street Food",12,1342.47,111.87
+2021,NORMAL,"Malay Cuisine",16,1777.4,111.09
+2021,NORMAL,"Thai Kitchen",17,1705.6,100.33
+2021,NORMAL,"Western Grill",20,2282.62,114.13
+2021,VIP,"Beverage House",2,218.3,109.15
+2021,VIP,"Chinese Cuisine",2,260.82,130.41
+2021,VIP,"Dessert Cafe",3,327.2,109.07
+2021,VIP,"Fast Food Express",4,498.76,124.69
+2021,VIP,"Indian Cuisine",2,285.2,142.6
+2021,VIP,"Korean Street Food",10,1065.98,106.6
+2021,VIP,"Malay Cuisine",5,588.37,117.67
+2021,VIP,"Thai Kitchen",5,601.7,120.34
+2021,VIP,"Western Grill",1,88.15,88.15
+2022,NORMAL,"Beverage House",17,2167.6,127.51
+2022,NORMAL,"Chinese Cuisine",27,2538.38,94.01
+2022,NORMAL,"Dessert Cafe",34,3362.45,98.9
+2022,NORMAL,"Fast Food Express",29,2647.77,91.3
+2022,NORMAL,"Indian Cuisine",12,1394.6,116.22
+2022,NORMAL,"Japanese Bento",19,2460.02,129.47
+2022,NORMAL,"Korean Street Food",17,1202.38,70.73
+2022,NORMAL,"Malay Cuisine",25,3061.68,122.47
+2022,NORMAL,"Thai Kitchen",19,1808,95.16
+2022,NORMAL,"Western Grill",18,2122.76,117.93
+2022,VIP,"Beverage House",11,1167.1,106.1
+2022,VIP,"Chinese Cuisine",2,181.2,90.6
+2022,VIP,"Dessert Cafe",2,300.07,150.04
+2022,VIP,"Fast Food Express",4,538.1,134.53
+2022,VIP,"Indian Cuisine",3,321.92,107.31
+2022,VIP,"Japanese Bento",3,349.34,116.45
+2022,VIP,"Korean Street Food",2,228.7,114.35
+2022,VIP,"Malay Cuisine",4,523.1,130.78
+2022,VIP,"Thai Kitchen",3,296.68,98.89
+2022,VIP,"Western Grill",4,468.88,117.22
+2023,NORMAL,"Beverage House",12,1378.2,114.85
+2023,NORMAL,"Chinese Cuisine",20,1664.63,83.23
+2023,NORMAL,"Dessert Cafe",10,797.41,79.74
+2023,NORMAL,"Fast Food Express",16,1152.92,72.06
+2023,NORMAL,"Indian Cuisine",19,2354.45,123.92
+2023,NORMAL,"Japanese Bento",14,1789.01,127.79
+2023,NORMAL,"Korean Street Food",12,1110.33,92.53
+2023,NORMAL,"Malay Cuisine",21,2428.59,115.65
+2023,NORMAL,"Thai Kitchen",12,1066.6,88.88
+2023,NORMAL,"Western Grill",13,1553.33,119.49
+2023,VIP,"Beverage House",1,153.9,153.9
+2023,VIP,"Chinese Cuisine",5,478.77,95.75
+2023,VIP,"Dessert Cafe",2,224.7,112.35
+2023,VIP,"Fast Food Express",3,345.08,115.03
+2023,VIP,"Indian Cuisine",3,367,122.33
+2023,VIP,"Japanese Bento",1,89.5,89.5
+2023,VIP,"Korean Street Food",3,360,120
+2023,VIP,"Malay Cuisine",3,313.88,104.63
+2023,VIP,"Thai Kitchen",2,261.9,130.95
+2023,VIP,"Western Grill",1,133.9,133.9
+2024,NORMAL,"Beverage House",11,1485.2,135.02
+2024,NORMAL,"Chinese Cuisine",23,2416.41,105.06
+2024,NORMAL,"Dessert Cafe",10,918.11,91.81
+2024,NORMAL,"Fast Food Express",21,2073.97,98.76
+2024,NORMAL,"Indian Cuisine",19,2466.7,129.83
+2024,NORMAL,"Japanese Bento",10,1469.02,146.9
+2024,NORMAL,"Korean Street Food",11,1108.76,100.8
+2024,NORMAL,"Malay Cuisine",24,3098.67,129.11
+2024,NORMAL,"Thai Kitchen",9,854.5,94.94
+2024,NORMAL,"Western Grill",8,1132.47,141.56
+2024,VIP,"Beverage House",2,197.4,98.7
+2024,VIP,"Chinese Cuisine",2,158.59,79.3
+2024,VIP,"Dessert Cafe",2,212.9,106.45
+2024,VIP,"Fast Food Express",2,227.3,113.65
+2024,VIP,"Indian Cuisine",2,97.8,48.9
+2024,VIP,"Japanese Bento",2,108.8,54.4
+2024,VIP,"Korean Street Food",1,66.6,66.6
+2024,VIP,"Malay Cuisine",5,550.58,110.12
+2024,VIP,"Thai Kitchen",1,178.5,178.5
+2024,VIP,"Western Grill",3,235.48,78.49
+2025,NORMAL,"Beverage House",5,510.6,102.12
+2025,NORMAL,"Chinese Cuisine",6,425.44,70.91
+2025,NORMAL,"Dessert Cafe",8,869.7,108.71
+2025,NORMAL,"Fast Food Express",7,831.22,118.75
+2025,NORMAL,"Indian Cuisine",6,569.4,94.9
+2025,NORMAL,"Japanese Bento",6,856.41,142.74
+2025,NORMAL,"Korean Street Food",9,613.3,68.14
+2025,NORMAL,"Malay Cuisine",6,512.43,85.41
+2025,NORMAL,"Thai Kitchen",7,553.8,79.11
+2025,NORMAL,"Western Grill",8,892.44,111.56
+2025,VIP,"Beverage House",1,141.1,141.1
+2025,VIP,"Chinese Cuisine",2,109,54.5
+2025,VIP,"Fast Food Express",1,45.6,45.6
+2025,VIP,"Indian Cuisine",2,194.9,97.45
+2025,VIP,"Japanese Bento",2,269.3,134.65
+2025,VIP,"Malay Cuisine",2,169.68,84.84
+2025,VIP,"Thai Kitchen",2,278.9,139.45
+2025,VIP,"Western Grill",1,116.08,116.08
+cohort_year,member_type,restaurant_cat,order_count,total_revenue,avg_order_value

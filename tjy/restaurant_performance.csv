@@ -1,0 +1,783 @@
+restaurant_name,category,halal_status,rating,location_area,yr_quarter,order_count,total_revenue,avg_order_value
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2016-Q2,1,103.6,103.6
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2016-Q3,4,487.88,121.97
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2017-Q1,1,96,96
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2017-Q2,1,79.5,79.5
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2017-Q4,1,79.5,79.5
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2018-Q1,5,829.3,165.86
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2018-Q2,2,222.4,111.2
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2018-Q3,1,79.6,79.6
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2018-Q4,1,119.6,119.6
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2019-Q1,6,881.2,146.87
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2019-Q2,2,223.2,111.6
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2019-Q3,5,823.6,164.72
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2019-Q4,2,214.8,107.4
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2020-Q1,2,185.2,92.6
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2020-Q2,7,928.2,132.6
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2020-Q3,2,154.3,77.15
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2020-Q4,6,819.08,136.51
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2021-Q1,7,945.64,135.09
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2021-Q2,2,154.1,77.05
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2021-Q3,7,1005.26,143.61
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2021-Q4,3,294.8,98.27
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2022-Q1,7,985.66,140.81
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2022-Q2,7,985.3,140.76
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2022-Q3,8,1111.7,138.96
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2022-Q4,3,311.3,103.77
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2023-Q1,7,713.66,101.95
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2023-Q2,8,1171.81,146.48
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2023-Q3,8,1088.34,136.04
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2023-Q4,8,931.7,116.46
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2024-Q1,8,961.6,120.2
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2024-Q2,8,859.3,107.41
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2024-Q3,8,1036.6,129.58
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2024-Q4,9,1034.81,114.98
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2025-Q1,8,1133,141.63
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2025-Q2,9,1092.41,121.38
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2025-Q3,8,856.6,107.08
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2025-Q4,9,864.03,96
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2026-Q1,10,950.52,95.05
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2026-Q2,8,840.5,105.06
+"Banana Leaf Junction","Indian Cuisine",HALAL,4.4,"Brickfields",2026-Q3,1,197.4,197.4
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2016-Q3,1,71.8,71.8
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2017-Q1,5,621.7,124.34
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2017-Q3,1,138.4,138.4
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2017-Q4,1,148.4,148.4
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2018-Q1,1,148,148
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2018-Q2,6,797.7,132.95
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2018-Q3,2,262.9,131.45
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2018-Q4,1,140.9,140.9
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2019-Q1,7,883.4,126.2
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2019-Q2,1,139.7,139.7
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2019-Q3,2,271.7,135.85
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2019-Q4,6,786,131
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2020-Q1,2,276.5,138.25
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2020-Q2,7,919.1,131.3
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2020-Q3,3,405.7,135.23
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2020-Q4,7,950.24,135.75
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2021-Q1,2,271.4,135.7
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2021-Q2,7,889.8,127.11
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2021-Q3,8,1031.16,128.9
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2021-Q4,3,414.9,138.3
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2022-Q1,8,1083.8,135.48
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2022-Q2,7,847.3,121.04
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2022-Q3,3,412.5,137.5
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2022-Q4,9,1185.5,131.72
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2023-Q1,8,816.4,102.05
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2023-Q2,8,967.28,120.91
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2023-Q3,9,868.9,96.54
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2023-Q4,8,1363.7,170.46
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2024-Q1,9,982.7,109.19
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2024-Q2,4,456.3,114.08
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2024-Q3,9,1106.9,122.99
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2024-Q4,9,1202.6,133.62
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2025-Q1,9,1061.32,117.92
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2025-Q2,15,1874.51,124.97
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2025-Q3,9,944.66,104.96
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2025-Q4,9,1539.1,171.01
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2026-Q1,10,1197.03,119.7
+"Bangkok Basil Table","Thai Kitchen",HALAL,3.9,"Damansara",2026-Q2,10,1108.78,110.88
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2016-Q3,1,122.2,122.2
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2017-Q1,1,141.9,141.9
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2017-Q2,2,268,134
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2017-Q3,1,141.9,141.9
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2017-Q4,1,118.3,118.3
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2018-Q1,1,118.7,118.7
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2018-Q2,3,423,141
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2018-Q3,2,274.9,137.45
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2018-Q4,1,129.9,129.9
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2019-Q1,2,274.9,137.45
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2019-Q2,3,400.1,133.37
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2019-Q3,2,274.9,137.45
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2019-Q4,4,523.5,130.88
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2020-Q1,2,307.8,153.9
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2020-Q2,4,463.6,115.9
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2020-Q3,2,260.7,130.35
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2020-Q4,5,642.4,128.48
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2021-Q1,2,273.5,136.75
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2021-Q2,5,658.2,131.64
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2021-Q3,5,614.5,122.9
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2021-Q4,3,355.1,118.37
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2022-Q1,5,556.1,111.22
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2022-Q2,5,580.6,116.12
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2022-Q3,3,355.1,118.37
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2022-Q4,6,715.8,119.3
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2023-Q1,5,698.4,139.68
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2023-Q2,6,679.2,113.2
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2023-Q3,5,542.2,108.44
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2023-Q4,5,652.5,130.5
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2024-Q1,5,591.7,118.34
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2024-Q2,6,830.7,138.45
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2024-Q3,7,979.8,139.97
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2024-Q4,6,625,104.17
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2025-Q1,7,803.1,114.73
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2025-Q2,6,712.6,118.77
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2025-Q3,7,752.1,107.44
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2025-Q4,9,994.4,110.49
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2026-Q1,7,762.7,108.96
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2026-Q2,7,901.3,128.76
+"Brew & Boba Station","Beverage House",HALAL,4.7,"Cheras",2026-Q3,1,113.8,113.8
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2016-Q4,1,102.4,102.4
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2017-Q2,1,49.8,49.8
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2017-Q3,1,121.4,121.4
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2017-Q4,1,69.2,69.2
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2018-Q1,4,307.84,76.96
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2018-Q2,1,129.6,129.6
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2018-Q3,1,69.2,69.2
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2018-Q4,5,410.38,82.08
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2019-Q1,1,69.2,69.2
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2019-Q2,2,179.4,89.7
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2019-Q3,4,242.02,60.51
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2019-Q4,2,179.4,89.7
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2020-Q1,6,542.64,90.44
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2020-Q2,2,130.6,65.3
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2020-Q3,5,440.29,88.06
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2020-Q4,2,157.8,78.9
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2021-Q1,6,437.22,72.87
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2021-Q2,3,281.8,93.93
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2021-Q3,5,434.43,86.89
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2021-Q4,6,473,78.83
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2022-Q1,3,281.8,93.93
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2022-Q2,7,616.82,88.12
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2022-Q3,6,542.62,90.44
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2022-Q4,6,514.38,85.73
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2023-Q1,4,301,75.25
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2023-Q2,6,215.12,35.85
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2023-Q3,7,534.8,76.4
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2023-Q4,7,405.06,57.87
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2024-Q1,7,577.12,82.45
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2024-Q2,7,501.24,71.61
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2024-Q3,7,382.44,54.63
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2024-Q4,8,593.34,74.17
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2025-Q1,7,613.44,87.63
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2025-Q2,8,386.3,48.29
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2025-Q3,8,655,81.88
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2025-Q4,8,540.06,67.51
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2026-Q1,7,370.42,52.92
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2026-Q2,9,757.1,84.12
+"Burger Sprint Drive-In","Fast Food Express",HALAL,4.6,"Seremban",2026-Q3,4,325.28,81.32
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2016-Q4,1,123.8,123.8
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2017-Q2,1,66.03,66.03
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2017-Q3,4,163.96,40.99
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2017-Q4,1,69.38,69.38
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2018-Q1,1,39.6,39.6
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2018-Q2,1,27.64,27.64
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2018-Q3,4,110.59,27.65
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2018-Q4,2,124.99,62.5
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2019-Q1,1,44.39,44.39
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2019-Q2,5,407.62,81.52
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2019-Q3,2,119.89,59.95
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2019-Q4,5,282.72,56.54
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2020-Q1,2,105.84,52.92
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2020-Q2,2,135.41,67.71
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2020-Q3,5,182.55,36.51
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2020-Q4,6,394.97,65.83
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2021-Q1,2,114.09,57.05
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2021-Q2,6,286.36,47.73
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2021-Q3,3,227.17,75.72
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2021-Q4,6,275.76,45.96
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2022-Q1,6,456.25,76.04
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2022-Q2,3,192.52,64.17
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2022-Q3,6,325.85,54.31
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2022-Q4,6,247.41,41.24
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2023-Q1,7,473.92,67.7
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2023-Q2,6,434.52,72.42
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2023-Q3,4,183.78,45.95
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2023-Q4,7,564.21,80.6
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2024-Q1,7,360.17,51.45
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2024-Q2,8,580.15,72.52
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2024-Q3,7,374.21,53.46
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2024-Q4,7,458.72,65.53
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2025-Q1,7,436.73,62.39
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2025-Q2,8,483.1,60.39
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2025-Q3,8,520.67,65.08
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2025-Q4,8,582.14,72.77
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2026-Q1,10,728.94,72.89
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2026-Q2,9,501.83,55.76
+"Dim Sum Avenue","Chinese Cuisine",NON_HALAL,4.2,"Puchong",2026-Q3,1,29.92,29.92
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2016-Q4,1,110.7,110.7
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2017-Q2,1,51.5,51.5
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2017-Q3,1,52.2,52.2
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2017-Q4,5,746.1,149.22
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2018-Q1,1,51.1,51.1
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2018-Q2,1,54.8,54.8
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2018-Q3,1,50.8,50.8
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2018-Q4,7,964.78,137.83
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2019-Q1,1,50.8,50.8
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2019-Q2,2,105.6,52.8
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2019-Q3,6,943,157.17
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2019-Q4,3,158.8,52.93
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2020-Q1,6,810.31,135.05
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2020-Q2,2,90,45
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2020-Q3,7,1021.1,145.87
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2020-Q4,2,103.5,51.75
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2021-Q1,8,1035.3,129.41
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2021-Q2,3,163.9,54.63
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2021-Q3,7,833.23,119.03
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2021-Q4,7,1039.5,148.5
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2022-Q1,3,156.8,52.27
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2022-Q2,9,1024.7,113.86
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2022-Q3,7,808.73,115.53
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2022-Q4,8,1075.8,134.48
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2023-Q1,4,422.1,105.53
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2023-Q2,8,1067.27,133.41
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2023-Q3,8,1028.5,128.56
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2023-Q4,9,955.85,106.21
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2024-Q1,9,1307.8,145.31
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2024-Q2,8,955.5,119.44
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2024-Q3,9,1022.1,113.57
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2024-Q4,10,1363.13,136.31
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2025-Q1,8,1227.37,153.42
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2025-Q2,10,1271.1,127.11
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2025-Q3,10,1099.1,109.91
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2025-Q4,9,1408.9,156.54
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2026-Q1,9,1150.7,127.86
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2026-Q2,11,1332.7,121.15
+"Gelato & Waffle Room","Dessert Cafe",HALAL,4.5,"Bangsar South",2026-Q3,5,445.3,89.06
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2016-Q3,1,94,94
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2017-Q1,1,48,48
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2017-Q2,4,462.37,115.59
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2017-Q3,1,57.4,57.4
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2017-Q4,1,57.1,57.1
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2018-Q1,1,60.7,60.7
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2018-Q2,1,49.2,49.2
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2018-Q3,5,570.95,114.19
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2018-Q4,2,132.2,66.1
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2019-Q1,1,73.9,73.9
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2019-Q2,6,600.4,100.07
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2019-Q3,2,166.8,83.4
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2019-Q4,6,574.87,95.81
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2020-Q1,2,154.9,77.45
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2020-Q2,6,496.37,82.73
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2020-Q3,2,120.9,60.45
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2020-Q4,7,670.2,95.74
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2021-Q1,2,97.1,48.55
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2021-Q2,7,625.57,89.37
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2021-Q3,3,215.1,71.7
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2021-Q4,6,607.96,101.33
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2022-Q1,7,708.73,101.25
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2022-Q2,4,280.1,70.03
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2022-Q3,7,728.62,104.09
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2022-Q4,8,800.85,100.11
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2023-Q1,7,772.08,110.3
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2023-Q2,8,963.95,120.49
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2023-Q3,3,430.6,143.53
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2023-Q4,9,1068.15,118.68
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2024-Q1,7,1116.88,159.55
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2024-Q2,8,961.36,120.17
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2024-Q3,9,1333.41,148.16
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2024-Q4,8,1011.46,126.43
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2025-Q1,9,1034.76,114.97
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2025-Q2,8,1258.79,157.35
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2025-Q3,9,778.71,86.52
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2025-Q4,9,1037.34,115.26
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2026-Q1,13,1517.86,116.76
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2026-Q2,9,900.37,100.04
+"Kampung Corner Deli","Malay Cuisine",HALAL,4.8,"Shah Alam",2026-Q3,1,48.7,48.7
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2016-Q4,1,94.8,94.8
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2017-Q2,1,157.4,157.4
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2017-Q3,6,757.5,126.25
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2017-Q4,1,158.8,158.8
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2018-Q1,1,162.5,162.5
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2018-Q2,1,154.2,154.2
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2018-Q3,6,660.69,110.12
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2018-Q4,2,302.6,151.3
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2019-Q1,1,126.2,126.2
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2019-Q2,7,809.46,115.64
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2019-Q3,2,291,145.5
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2019-Q4,2,264.2,132.1
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2020-Q1,7,853.38,121.91
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2020-Q2,2,278.8,139.4
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2020-Q3,7,843.48,120.5
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2020-Q4,3,477.5,159.17
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2021-Q1,7,865,123.57
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2021-Q2,8,908.15,113.52
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2021-Q3,3,450,150
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2021-Q4,8,906.26,113.28
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2022-Q1,8,1001.68,125.21
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2022-Q2,3,482.9,160.97
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2022-Q3,8,946,118.25
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2022-Q4,8,883.38,110.42
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2023-Q1,9,1309.12,145.46
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2023-Q2,3,283.4,94.47
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2023-Q3,9,1138.5,126.5
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2023-Q4,9,1373.48,152.61
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2024-Q1,9,993.3,110.37
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2024-Q2,10,1036.6,103.66
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2024-Q3,9,996.32,110.7
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2024-Q4,9,1008.58,112.06
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2025-Q1,9,1092.56,121.4
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2025-Q2,10,1140.41,114.04
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2025-Q3,10,1293.47,129.35
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2025-Q4,10,1034.34,103.43
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2026-Q1,9,1501.88,166.88
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2026-Q2,16,1719.39,107.46
+"Kimchi Street Kitchen","Korean Street Food",HALAL,4.3,"Bukit Jalil",2026-Q3,1,126.8,126.8
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2016-Q2,1,148.4,148.4
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2016-Q4,3,383.34,127.78
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2017-Q1,1,99.3,99.3
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2017-Q2,1,72.9,72.9
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2017-Q4,1,80.9,80.9
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2018-Q1,1,150.2,150.2
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2018-Q2,4,460.7,115.18
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2018-Q3,2,223.6,111.8
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2018-Q4,1,72.7,72.7
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2019-Q1,5,644.82,128.96
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2019-Q2,1,73.9,73.9
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2019-Q3,2,226,113
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2019-Q4,5,611.68,122.34
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2020-Q1,2,212.2,106.1
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2020-Q2,5,588.26,117.65
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2020-Q3,3,340.8,113.6
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2020-Q4,5,572.84,114.57
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2021-Q1,3,290.3,96.77
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2021-Q2,5,593.62,118.72
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2021-Q3,6,813.06,135.51
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2021-Q4,3,361.8,120.6
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2022-Q1,6,812.94,135.49
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2022-Q2,6,770.4,128.4
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2022-Q3,6,835.96,139.33
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2022-Q4,4,511.3,127.83
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2023-Q1,6,676.8,112.8
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2023-Q2,7,986.7,140.96
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2023-Q3,7,905.34,129.33
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2023-Q4,7,851.28,121.61
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2024-Q1,7,960.9,137.27
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2024-Q2,7,824.04,117.72
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2024-Q3,4,455,113.75
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2024-Q4,8,1077.36,134.67
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2025-Q1,10,1338.35,133.84
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2025-Q2,8,834.44,104.31
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2025-Q3,7,802.74,114.68
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2025-Q4,8,1076.18,134.52
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2026-Q1,9,1243.48,138.16
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2026-Q2,7,812.88,116.13
+"Mori Bento Express","Japanese Bento",HALAL,4.5,"Putrajaya",2026-Q3,1,67.6,67.6
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2016-Q1,1,87.37,87.37
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2016-Q2,5,717.48,143.5
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2017-Q1,1,107.95,107.95
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2017-Q2,1,76.34,76.34
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2017-Q4,1,93.56,93.56
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2018-Q1,6,552.75,92.13
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2018-Q2,2,183.39,91.7
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2018-Q3,1,75.04,75.04
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2018-Q4,1,99.28,99.28
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2019-Q1,7,701.74,100.25
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2019-Q2,1,107.08,107.08
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2019-Q3,7,689.05,98.44
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2019-Q4,2,185.45,92.73
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2020-Q1,7,780.57,111.51
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2020-Q2,2,153.61,76.81
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2020-Q3,8,867.5,108.44
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2020-Q4,2,244.87,122.44
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2021-Q1,8,741.73,92.72
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2021-Q2,2,222.85,111.43
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2021-Q3,8,770.24,96.28
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2021-Q4,8,747.78,93.47
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2022-Q1,3,300.26,100.09
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2022-Q2,8,786.24,98.28
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2022-Q3,8,846.92,105.87
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2022-Q4,4,416.5,104.13
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2023-Q1,9,1303.56,144.84
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2023-Q2,8,797.17,99.65
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2023-Q3,9,988.25,109.81
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2023-Q4,8,873.44,109.18
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2024-Q1,10,978.17,97.82
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2024-Q2,9,1166.89,129.65
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2024-Q3,9,889.87,98.87
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2024-Q4,10,1439.31,143.93
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2025-Q1,9,801.66,89.07
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2025-Q2,10,1304.27,130.43
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2025-Q3,10,1026.1,102.61
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2025-Q4,9,1093.72,121.52
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2026-Q1,10,1224.26,122.43
+"Penang Wok House","Chinese Cuisine",NON_HALAL,3.7,"Subang Jaya",2026-Q2,11,1062.61,96.6
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2016-Q3,1,106,106
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2017-Q1,1,136.8,136.8
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2017-Q2,5,592.66,118.53
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2017-Q3,1,134.8,134.8
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2017-Q4,1,149,149
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2018-Q1,1,133,133
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2018-Q2,1,112.2,112.2
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2018-Q3,7,862.88,123.27
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2018-Q4,1,119.6,119.6
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2019-Q1,2,273.6,136.8
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2019-Q2,6,627.32,104.55
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2019-Q3,2,281.8,140.9
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2019-Q4,7,900,128.57
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2020-Q1,2,254.1,127.05
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2020-Q2,7,878.08,125.44
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2020-Q3,3,391.3,130.43
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2020-Q4,7,786.93,112.42
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2021-Q1,2,264.5,132.25
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2021-Q2,8,1038.66,129.83
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2021-Q3,3,407.4,135.8
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2021-Q4,8,1014.74,126.84
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2022-Q1,8,919.48,114.94
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2022-Q2,8,1051.81,131.48
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2022-Q3,3,401.8,133.93
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2022-Q4,8,1009.94,126.24
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2023-Q1,9,930.12,103.35
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2023-Q2,9,873.09,97.01
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2023-Q3,9,1133.94,125.99
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2023-Q4,3,340.8,113.6
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2024-Q1,10,1217.11,121.71
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2024-Q2,9,1341.08,149.01
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2024-Q3,9,1012,112.44
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2024-Q4,9,988,109.78
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2025-Q1,10,1664.32,166.43
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2025-Q2,9,978.78,108.75
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2025-Q3,10,1269.24,126.92
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2025-Q4,15,1636.27,109.08
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2026-Q1,10,1184.56,118.46
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2026-Q2,10,1117.03,111.7
+"QuickBite Burgers","Fast Food Express",HALAL,4.1,"Ampang",2026-Q3,1,156.7,156.7
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2016-Q2,1,37.8,37.8
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2016-Q4,3,191,63.67
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2017-Q1,1,68.8,68.8
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2017-Q2,1,35.2,35.2
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2017-Q4,1,66.6,66.6
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2018-Q1,1,68.8,68.8
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2018-Q2,4,250.6,62.65
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2018-Q3,2,149.8,74.9
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2018-Q4,1,17.6,17.6
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2019-Q1,5,300.84,60.17
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2019-Q2,1,17.6,17.6
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2019-Q3,5,316.2,63.24
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2019-Q4,2,128.8,64.4
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2020-Q1,2,56.2,28.1
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2020-Q2,5,373.2,74.64
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2020-Q3,3,153,51
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2020-Q4,5,230,46
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2021-Q1,5,274.6,54.92
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2021-Q2,3,153,51
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2021-Q3,6,424.2,70.7
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2021-Q4,3,177.6,59.2
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2022-Q1,6,320.2,53.37
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2022-Q2,6,361.62,60.27
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2022-Q3,6,406.6,67.77
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2022-Q4,4,228.8,57.2
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2023-Q1,6,465.09,77.52
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2023-Q2,7,438.22,62.6
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2023-Q3,7,531,75.86
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2023-Q4,6,493.67,82.28
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2024-Q1,8,612.2,76.53
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2024-Q2,7,512.92,73.27
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2024-Q3,7,376.4,53.77
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2024-Q4,7,473.4,67.63
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2025-Q1,8,584.28,73.04
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2025-Q2,8,607,75.88
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2025-Q3,8,631.2,78.9
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2025-Q4,7,439,62.71
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2026-Q1,8,571.8,71.48
+"Seoul Sizzle Kitchen","Korean Street Food",HALAL,3.8,"Sunway",2026-Q2,9,446.15,49.57
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2016-Q4,1,42,42
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2017-Q2,1,91,91
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2017-Q3,1,92.1,92.1
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2017-Q4,4,340.1,85.03
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2018-Q1,1,54.4,54.4
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2018-Q2,1,85.6,85.6
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2018-Q3,1,49.9,49.9
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2018-Q4,4,306.58,76.65
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2019-Q1,1,49.9,49.9
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2019-Q2,2,161.9,80.95
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2019-Q3,5,364.8,72.96
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2019-Q4,2,124.3,62.15
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2020-Q1,5,391.84,78.37
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2020-Q2,2,161.2,80.6
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2020-Q3,4,265.6,66.4
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2020-Q4,3,227.2,75.73
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2021-Q1,5,320.28,64.06
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2021-Q2,6,524.4,87.4
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2021-Q3,3,277.1,92.37
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2021-Q4,5,400.88,80.18
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2022-Q1,6,537.5,89.58
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2022-Q2,3,277.3,92.43
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2022-Q3,6,517.4,86.23
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2022-Q4,5,398.58,79.72
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2023-Q1,7,560.5,80.07
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2023-Q2,3,299.6,99.87
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2023-Q3,7,312.2,44.6
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2023-Q4,6,353.72,58.95
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2024-Q1,7,568.4,81.2
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2024-Q2,7,565.6,80.8
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2024-Q3,7,529.26,75.61
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2024-Q4,7,380.6,54.37
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2025-Q1,7,508.2,72.6
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2025-Q2,7,530.9,75.84
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2025-Q3,8,415.6,51.95
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2025-Q4,8,549.2,68.65
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2026-Q1,6,379.26,63.21
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2026-Q2,9,832.3,92.48
+"Siam Wok Express","Thai Kitchen",HALAL,4.4,"George Town",2026-Q3,4,327.46,81.87
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2016-Q3,1,78.68,78.68
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2017-Q1,5,636.15,127.23
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2017-Q3,1,137.76,137.76
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2017-Q4,1,116.37,116.37
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2018-Q1,1,145.35,145.35
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2018-Q2,4,510.65,127.66
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2018-Q3,2,272.05,136.03
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2018-Q4,1,176.89,176.89
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2019-Q1,6,779.35,129.89
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2019-Q2,1,176.89,176.89
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2019-Q3,2,269.65,134.83
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2019-Q4,6,833.68,138.95
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2020-Q1,2,310.37,155.19
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2020-Q2,5,689.08,137.82
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2020-Q3,2,299.43,149.72
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2020-Q4,7,955.31,136.47
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2021-Q1,3,446.74,148.91
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2021-Q2,6,877.81,146.3
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2021-Q3,6,752.47,125.41
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2021-Q4,3,388.22,129.41
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2022-Q1,7,902.63,128.95
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2022-Q2,7,910.88,130.13
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2022-Q3,3,406.68,135.56
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2022-Q4,7,899.39,128.48
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2023-Q1,7,806.14,115.16
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2023-Q2,8,950.3,118.79
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2023-Q3,6,769.81,128.3
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2023-Q4,9,916.99,101.89
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2024-Q1,3,261.03,87.01
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2024-Q2,8,956.81,119.6
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2024-Q3,8,683.64,85.46
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2024-Q4,8,836.87,104.61
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2025-Q1,9,856.14,95.13
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2025-Q2,7,560.39,80.06
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2025-Q3,13,1717.95,132.15
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2025-Q4,8,998.07,124.76
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2026-Q1,9,1275.74,141.75
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2026-Q2,9,1143.45,127.05
+"Smokehouse Grill Lab","Western Grill",NON_HALAL,4.6,"Desa ParkCity",2026-Q3,1,88.15,88.15
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2016-Q4,1,128.2,128.2
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2017-Q2,1,113.2,113.2
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2017-Q3,5,712.47,142.49
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2017-Q4,1,114.7,114.7
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2018-Q1,1,142.9,142.9
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2018-Q2,1,136.1,136.1
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2018-Q3,5,824.46,164.89
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2018-Q4,2,285.2,142.6
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2019-Q1,1,181.4,181.4
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2019-Q2,6,866.61,144.44
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2019-Q3,2,336,168
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2019-Q4,2,316,158
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2020-Q1,6,958.92,159.82
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2020-Q2,2,218.1,109.05
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2020-Q3,6,1040.7,173.45
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2020-Q4,7,1026.12,146.59
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2021-Q1,2,218.9,109.45
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2021-Q2,7,1150.9,164.41
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2021-Q3,2,261.3,130.65
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2021-Q4,7,1209.5,172.79
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2022-Q1,7,1070.48,152.93
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2022-Q2,4,532.2,133.05
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2022-Q3,7,1185.8,169.4
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2022-Q4,8,1277.9,159.74
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2023-Q1,7,793.5,113.36
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2023-Q2,8,1157.88,144.74
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2023-Q3,3,314.2,104.73
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2023-Q4,8,865.09,108.14
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2024-Q1,8,1122.8,140.35
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2024-Q2,8,744.32,93.04
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2024-Q3,9,959.4,106.6
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2024-Q4,8,895.21,111.9
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2025-Q1,9,1079.22,119.91
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2025-Q2,8,786.9,98.36
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2025-Q3,9,918.26,102.03
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2025-Q4,9,1193.3,132.59
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2026-Q1,9,958.8,106.53
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2026-Q2,13,1594.19,122.63
+"Spice Tiffin House","Indian Cuisine",HALAL,3.6,"Kajang",2026-Q3,1,58.3,58.3
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2016-Q3,1,99.6,99.6
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2017-Q1,4,366.6,91.65
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2017-Q3,1,45.7,45.7
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2017-Q4,1,15.5,15.5
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2018-Q1,1,70.9,70.9
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2018-Q2,4,409.6,102.4
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2018-Q3,2,77.6,38.8
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2018-Q4,1,40.3,40.3
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2019-Q1,4,260.35,65.09
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2019-Q2,1,40.3,40.3
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2019-Q3,2,77.6,38.8
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2019-Q4,5,357.5,71.5
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2020-Q1,2,117,58.5
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2020-Q2,5,369.6,73.92
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2020-Q3,3,130.2,43.4
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2020-Q4,4,213.97,53.49
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2021-Q1,2,100.6,50.3
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2021-Q2,6,447.9,74.65
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2021-Q3,6,447.9,74.65
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2021-Q4,3,120.7,40.23
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2022-Q1,5,315.11,63.02
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2022-Q2,6,401,66.83
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2022-Q3,3,137.5,45.83
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2022-Q4,6,440.2,73.37
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2023-Q1,6,306.58,51.1
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2023-Q2,7,610.6,87.23
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2023-Q3,7,404.2,57.74
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2023-Q4,5,340.81,68.16
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2024-Q1,5,270.9,54.18
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2024-Q2,7,552.3,78.9
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2024-Q3,7,468.9,66.99
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2024-Q4,6,476.51,79.42
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2025-Q1,8,553.9,69.24
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2025-Q2,7,570.8,81.54
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2025-Q3,8,588.63,73.58
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2025-Q4,10,645.5,64.55
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2026-Q1,7,548.54,78.36
+"Sweet Crumbs Cafe","Dessert Cafe",HALAL,4,"KLCC",2026-Q2,9,648.3,72.03
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2016-Q4,1,88.7,88.7
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2017-Q2,1,67.3,67.3
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2017-Q3,1,76.1,76.1
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2018-Q1,4,344.8,86.2
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2018-Q2,1,76.1,76.1
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2018-Q3,1,83.3,83.3
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2018-Q4,3,256.6,85.53
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2019-Q1,2,159.4,79.7
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2019-Q2,2,143.4,71.7
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2019-Q3,4,314.2,78.55
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2019-Q4,1,76.1,76.1
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2020-Q1,4,337.3,84.33
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2020-Q2,3,224.9,74.97
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2020-Q3,4,313.2,78.3
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2020-Q4,2,145.2,72.6
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2021-Q1,5,403.2,80.64
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2021-Q2,2,148.8,74.4
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2021-Q3,5,386.9,77.38
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2021-Q4,5,386.2,77.24
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2022-Q1,3,201.9,67.3
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2022-Q2,5,369.1,73.82
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2022-Q3,6,438.1,73.02
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2022-Q4,5,386.7,77.34
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2023-Q1,3,503.6,167.87
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2023-Q2,6,614.2,102.37
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2023-Q3,6,651.4,108.57
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2023-Q4,6,873.7,145.62
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2024-Q1,6,726.1,121.02
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2024-Q2,6,717.3,119.55
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2024-Q3,6,819.6,136.6
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2024-Q4,7,793.6,113.37
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2025-Q1,6,755.4,125.9
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2025-Q2,7,797.9,113.99
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2025-Q3,6,717,119.5
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2025-Q4,8,848.5,106.06
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2026-Q1,7,932.9,133.27
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2026-Q2,6,771.7,128.62
+"Teh Tarik & Beans Co","Beverage House",HALAL,3.9,"Serdang",2026-Q3,4,488.4,122.1
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2016-Q4,1,100.8,100.8
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2017-Q2,1,225.8,225.8
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2017-Q3,1,220.1,220.1
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2017-Q4,4,629.66,157.42
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2018-Q1,1,190.7,190.7
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2018-Q2,1,182.9,182.9
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2018-Q3,1,173.7,173.7
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2018-Q4,5,837.84,167.57
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2019-Q1,1,173.7,173.7
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2019-Q2,5,868.92,173.78
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2019-Q3,2,399.8,199.9
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2019-Q4,2,348.3,174.15
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2020-Q1,5,931.38,186.28
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2020-Q2,2,385.1,192.55
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2020-Q3,5,793.9,158.78
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2020-Q4,3,583.9,194.63
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2021-Q1,5,877.76,175.55
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2021-Q2,6,1112.1,185.35
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2021-Q3,2,418.7,209.35
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2021-Q4,6,1095.94,182.66
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2022-Q1,6,1109.66,184.94
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2022-Q2,3,638.3,212.77
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2022-Q3,7,1344.29,192.04
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2022-Q4,7,1259.46,179.92
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2023-Q1,6,708.98,118.16
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2023-Q2,3,369.5,123.17
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2023-Q3,7,1130.78,161.54
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2023-Q4,7,789.78,112.83
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2024-Q1,7,950.91,135.84
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2024-Q2,7,943.34,134.76
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2024-Q3,8,962.94,120.37
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2024-Q4,7,1021.92,145.99
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2025-Q1,8,1079.1,134.89
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2025-Q2,7,503.88,71.98
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2025-Q3,8,956.92,119.62
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2025-Q4,8,846.06,105.76
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2026-Q1,8,901.85,112.73
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2026-Q2,11,1449.47,131.77
+"Tokyo Bento Lane","Japanese Bento",NON_HALAL,3.7,"Johor Bahru",2026-Q3,1,175.5,175.5
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2016-Q4,1,137.94,137.94
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2017-Q2,1,85.68,85.68
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2017-Q3,1,93.12,93.12
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2017-Q4,5,464.19,92.84
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2018-Q1,1,116.52,116.52
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2018-Q2,1,90.69,90.69
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2018-Q3,1,90.19,90.19
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2018-Q4,6,591.44,98.57
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2019-Q1,1,90.19,90.19
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2019-Q2,2,197.74,98.87
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2019-Q3,5,465.56,93.11
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2019-Q4,1,90.69,90.69
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2020-Q1,7,635.43,90.78
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2020-Q2,2,167.61,83.81
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2020-Q3,6,662.23,110.37
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2020-Q4,2,201.92,100.96
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2021-Q1,6,538.6,89.77
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2021-Q2,3,273.98,91.33
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2021-Q3,6,640.23,106.71
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2021-Q4,7,705.83,100.83
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2022-Q1,3,266.16,88.72
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2022-Q2,6,555.52,92.59
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2022-Q3,8,812.88,101.61
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2022-Q4,7,675.48,96.5
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2023-Q1,3,379.38,126.46
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2023-Q2,7,866.36,123.77
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2023-Q3,8,1024.37,128.05
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2023-Q4,8,840.93,105.12
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2024-Q1,7,732.19,104.6
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2024-Q2,8,1224.69,153.09
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2024-Q3,8,875.57,109.45
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2024-Q4,8,1023.69,127.96
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2025-Q1,8,818.84,102.36
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2025-Q2,9,1015,112.78
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2025-Q3,7,1065.98,152.28
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2025-Q4,10,1104.26,110.43
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2026-Q1,9,1009.13,112.13
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2026-Q2,7,815.35,116.48
+"Urban Charcoal Grill","Western Grill",HALAL,3.8,"Petaling Jaya",2026-Q3,6,658.97,109.83
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2016-Q1,5,749.53,149.91
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2017-Q1,1,127.1,127.1
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2017-Q2,1,101.7,101.7
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2017-Q3,1,101.3,101.3
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2018-Q1,6,663.75,110.63
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2018-Q2,1,127.4,127.4
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2018-Q3,1,101,101
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2018-Q4,5,619.64,123.93
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2019-Q1,2,228.4,114.2
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2019-Q2,2,240.1,120.05
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2019-Q3,6,661.93,110.32
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2019-Q4,1,127.4,127.4
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2020-Q1,6,695.97,116
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2020-Q2,3,358.5,119.5
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2020-Q3,6,682.89,113.82
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2020-Q4,2,211.4,105.7
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2021-Q1,7,814.44,116.35
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2021-Q2,2,202.7,101.35
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2021-Q3,7,857.51,122.5
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2021-Q4,7,788.15,112.59
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2022-Q1,3,349.5,116.5
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2022-Q2,7,782.53,111.79
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2022-Q3,8,912.43,114.05
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2022-Q4,7,808.84,115.55
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2023-Q1,3,278.8,92.93
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2023-Q2,8,1075.29,134.41
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2023-Q3,8,857.6,107.2
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2023-Q4,8,778.13,97.27
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2024-Q1,8,918.35,114.79
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2024-Q2,8,970.98,121.37
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2024-Q3,8,1120.64,140.08
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2024-Q4,9,1050.41,116.71
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2025-Q1,8,1020.36,127.55
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2025-Q2,9,989.13,109.9
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2025-Q3,8,693.86,86.73
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2025-Q4,9,1121.06,124.56
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2026-Q1,10,1139.57,113.96
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2026-Q2,8,770.85,96.36
+"Warisan Nasi Kukus","Malay Cuisine",HALAL,4.3,"Cyberjaya",2026-Q3,1,104.3,104.3
