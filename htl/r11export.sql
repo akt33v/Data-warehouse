@@ -14,7 +14,7 @@ SET TRIMSPOOL ON
 SET COLSEP ''
 
 -- ── CSV 1: QUARTER SUMMARY ────────────────────────────────────────────────────
-SPOOL delivery_quarter_summary.csv
+SPOOL htl/delivery_quarter_summary.csv
 
 PROMPT pv_quarter,company_name,day_flag,order_count,fee_revenue,avg_fee
 
@@ -43,7 +43,7 @@ ORDER BY pv_quarter, Company_Name;
 SPOOL OFF
 
 -- ── CSV 2: LIFETIME MARKET SHARE & CONCENTRATION ──────────────────────────────
-SPOOL delivery_lifetime_share.csv
+SPOOL htl/delivery_lifetime_share.csv
 
 PROMPT company_name,service_status,order_count,fee_revenue,market_share,share_rank
 

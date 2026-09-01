@@ -29,8 +29,6 @@
    Safe to re-run: every statement is an idempotent UPDATE keyed on exact
    month/day, so running this twice just re-applies the same flags.
 
-   Run once, any time after 8_init_load.sql has populated DIM_DATE:
-       SQL> @"C:\Users\User\OneDrive\Desktop\Data Warehouse\Data-warehouse\dim_date_holidays.sql"
    Then re-run any report/export that segments by Is_Holiday (e.g. Report 9's
    htl\r9export.sql) to pick up the change.
    ============================================================================= */

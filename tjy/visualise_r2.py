@@ -1,142 +1,234 @@
-"""
-Report 4 Visualisations: Member Churn & Activation Status Analysis
-Data: member_churn_status.csv
-Cols: yr_month, member_type, member_status, order_count, total_revenue
-"""
-
+import os
+import warnings
 import pandas as pd
+import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
-import numpy as np
-import os
+import matplotlib.patches as mpatches
+import matplotlib.colors as mcolors
 
-# ── Load ──────────────────────────────────────────────────────────────────────
-CSV = os.path.join(os.path.dirname(__file__), "member_churn_status.csv")
+warnings.filterwarnings("ignore")
+matplotlib.rcParams.update({
+    "font.family": "sans-serif",
+    "axes.spines.top": False,
+    "axes.spines.right": False,
+    "axes.grid": True,
+    "grid.alpha": 0.25,
+    "axes.labelsize": 10,
+    "axes.titlesize": 11,
+    "axes.titleweight": "bold",
+    "figure.dpi": 130,
+})
 
-df = pd.read_csv(CSV, header=0, names=[
-    "yr_month", "member_type", "member_status", "order_count", "total_revenue"
-])
-df["yr_month"] = df["yr_month"].astype(str)
-df["order_count"] = pd.to_numeric(df["order_count"], errors="coerce")
-df["total_revenue"] = pd.to_numeric(df["total_revenue"], errors="coerce")
+HERE = os.path.dirname(os.path.abspath(__file__))
 
-STATUS_COLORS = {
-    "ACTIVE":      "#2ECC71",
-    "SUSPENDED":   "#F39C12",
-    "DEACTIVATED": "#E74C3C"
+# ── Load data ─────────────────────────────────────────────────────────────────
+SUM_CSV = os.path.join(HERE, "churn_risk_summary.csv")
+MEM_CSV = os.path.join(HERE, "churn_risk_members.csv")
+
+SUM_COLS = [
+    "cohort_year", "member_type", "member_status", "risk_tier",
+    "member_count", "avg_recency_days", "total_orders",
+    "total_revenue", "revenue_at_risk", "avg_churn_score",
+]
+MEM_COLS = [
+    "member_id", "member_type", "member_status", "cohort_year",
+    "registration_date", "last_order_date", "recency_days",
+    "total_orders", "total_revenue", "avg_order_value",
+    "risk_tier", "churn_score",
+]
+
+df  = pd.read_csv(SUM_CSV, header=0, names=SUM_COLS)
+dfm = pd.read_csv(MEM_CSV, header=0, names=MEM_COLS)
+
+# ── Coerce numerics ───────────────────────────────────────────────────────────
+for col in ["member_count", "avg_recency_days", "total_orders",
+            "total_revenue", "revenue_at_risk", "avg_churn_score"]:
+    df[col] = pd.to_numeric(df[col], errors="coerce")
+
+for col in ["recency_days", "total_orders", "total_revenue",
+            "avg_order_value", "churn_score"]:
+    dfm[col] = pd.to_numeric(dfm[col], errors="coerce")
+
+# ── Colour palettes ───────────────────────────────────────────────────────────
+TIER_ORDER  = ["Churned", "Critical", "High", "Suspended",
+               "Medium", "Low", "Healthy", "New - No Order"]
+TIER_COLORS = {
+    "Churned":       "#C0392B",
+    "Critical":      "#E74C3C",
+    "High":          "#E67E22",
+    "Suspended":     "#9B59B6",
+    "Medium":        "#F1C40F",
+    "Low":           "#3498DB",
+    "Healthy":       "#2ECC71",
+    "New - No Order":"#95A5A6",
 }
-TYPE_COLORS = {"NORMAL": "#4C9BE8", "VIP": "#F5A623"}
+TYPE_COLORS = {"VIP": "#F5A623", "NORMAL": "#4C9BE8"}
 
-fig = plt.figure(figsize=(22, 28))
-fig.suptitle("Report 4 — Member Churn & Activation Status Dashboard",
-             fontsize=18, fontweight="bold", y=0.99)
+TIER_LABELS = {
+    "Churned": "Churned\n(Deactivated)",
+    "Critical": "Critical\n(> 180 days)",
+    "High": "High\n(91-180 days)",
+    "Suspended": "Suspended\n(Account Hold)",
+    "Medium": "Medium\n(61-90 days)",
+    "Low": "Low\n(31-60 days)",
+    "Healthy": "Healthy\n(≤ 30 days)",
+    "New - No Order": "New\n(≤ 30 days)"
+}
 
-# ══════════════════════════════════════════════════════════════════════════════
-# VIZ 1 — Stacked bar: total revenue by status (ACTIVE / SUSPENDED / DEACTIVATED)
-# Pattern: how much revenue comes from each status bucket overall
-# ══════════════════════════════════════════════════════════════════════════════
-ax1 = fig.add_subplot(3, 2, 1)
-grp1 = df.groupby(["member_status", "member_type"])["total_revenue"].sum().unstack(fill_value=0)
-x = np.arange(len(grp1.index))
-w = 0.35
-for i, mtype in enumerate(["NORMAL", "VIP"]):
-    if mtype in grp1.columns:
-        ax1.bar(x + i * w, grp1[mtype], w, label=mtype,
-                color=TYPE_COLORS.get(mtype, "grey"), alpha=0.85)
-
-ax1.set_xticks(x + w / 2)
-ax1.set_xticklabels(grp1.index)
-ax1.set_ylabel("Total Revenue (RM)")
-ax1.set_title("1 · Revenue by Status & Member Type", fontweight="bold")
-ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'RM {x/1000:.0f}k'))
-ax1.legend()
-ax1.grid(axis="y", alpha=0.3)
-
-# ══════════════════════════════════════════════════════════════════════════════
-# VIZ 2 — Line: monthly order count trend split by status
-# Pattern: when do ACTIVE orders drop? Correlates with churn events
-# ══════════════════════════════════════════════════════════════════════════════
-ax2 = fig.add_subplot(3, 2, 2)
-grp2 = df.groupby(["yr_month", "member_status"])["order_count"].sum().unstack(fill_value=0)
-for status, color in STATUS_COLORS.items():
-    if status in grp2.columns:
-        ax2.plot(grp2.index, grp2[status], label=status, color=color,
-                 linewidth=2, marker="o", markersize=3)
-
-step = max(1, len(grp2) // 12)
-ax2.set_xticks(range(0, len(grp2), step))
-ax2.set_xticklabels(grp2.index[::step], rotation=45, ha="right", fontsize=7)
-ax2.set_ylabel("Order Count")
-ax2.set_title("2 · Monthly Order Trend by Member Status", fontweight="bold")
-ax2.legend()
-ax2.grid(axis="y", alpha=0.3)
-
-# ══════════════════════════════════════════════════════════════════════════════
-# VIZ 3 — Pie / donut: order share by status
-# Pattern: proportion of orders from non-ACTIVE users = lost engagement
-# ══════════════════════════════════════════════════════════════════════════════
-ax3 = fig.add_subplot(3, 2, 3)
-grp3 = df.groupby("member_status")["order_count"].sum()
-wedge_colors = [STATUS_COLORS.get(s, "grey") for s in grp3.index]
-wedges, texts, autotexts = ax3.pie(
-    grp3.values,
-    labels=grp3.index,
-    autopct="%1.1f%%",
-    colors=wedge_colors,
-    startangle=90,
-    wedgeprops=dict(width=0.55)
+# ── Figure ────────────────────────────────────────────────────────────────────
+fig = plt.figure(figsize=(24, 28))
+fig.suptitle(
+    "Report 2 — Member Churn Risk & Retention Analysis Dashboard",
+    fontsize=18, fontweight="bold", y=0.995
 )
-for at in autotexts:
-    at.set_fontsize(9)
-ax3.set_title("3 · Order Share by Member Status (Donut)", fontweight="bold")
+gs = fig.add_gridspec(3, 2, hspace=0.46, wspace=0.35)
 
-# ══════════════════════════════════════════════════════════════════════════════
-# VIZ 4 — Heatmap: revenue by yr_month x member_status
-# Pattern: identify months where SUSPENDED/DEACTIVATED revenue spikes (churn events)
-# ══════════════════════════════════════════════════════════════════════════════
-ax4 = fig.add_subplot(3, 2, 4)
-pivot4 = df.groupby(["member_status", "yr_month"])["total_revenue"].sum().unstack(fill_value=0)
-# Sample every N months to keep readable
-cols = pivot4.columns
-step4 = max(1, len(cols) // 20)
-pivot4_sub = pivot4[cols[::step4]]
-im = ax4.imshow(pivot4_sub.values, cmap="RdYlGn", aspect="auto")
-ax4.set_xticks(range(len(pivot4_sub.columns)))
-ax4.set_xticklabels(pivot4_sub.columns, rotation=90, fontsize=6)
-ax4.set_yticks(range(len(pivot4_sub.index)))
-ax4.set_yticklabels(pivot4_sub.index)
-plt.colorbar(im, ax=ax4, label="Revenue (RM)")
-ax4.set_title("4 · Revenue Heatmap: Status × Month", fontweight="bold")
+# =============================================================================
+# VIZ 1 — Stacked bar: Safe vs At-Risk Revenue by Risk Tier
+# =============================================================================
+ax1 = fig.add_subplot(gs[0, 0])
+grp1 = df.groupby("risk_tier")[["total_revenue", "revenue_at_risk"]].sum()
+grp1["safe_revenue"] = grp1["total_revenue"] - grp1["revenue_at_risk"]
+grp1 = grp1.reindex([t for t in TIER_ORDER if t in grp1.index])
 
-# ══════════════════════════════════════════════════════════════════════════════
-# VIZ 5 — Stacked area: monthly revenue by status
-# Pattern: erosion of ACTIVE revenue base over time; growing SUSPENDED share = warning
-# ══════════════════════════════════════════════════════════════════════════════
-ax5 = fig.add_subplot(3, 1, 3)
-grp5 = df.groupby(["yr_month", "member_status"])["total_revenue"].sum().unstack(fill_value=0)
-status_order = ["ACTIVE", "SUSPENDED", "DEACTIVATED"]
-colors5 = [STATUS_COLORS[s] for s in status_order if s in grp5.columns]
-cols5   = [s for s in status_order if s in grp5.columns]
+x1 = np.arange(len(grp1))
+w1 = 0.55
+bars_at  = ax1.bar(x1, grp1["revenue_at_risk"], w1,
+                   label="Revenue at Risk", color="#E74C3C", alpha=0.88)
+bars_safe = ax1.bar(x1, grp1["safe_revenue"], w1,
+                    bottom=grp1["revenue_at_risk"],
+                    label="Safe Revenue", color="#2ECC71", alpha=0.78)
 
-ax5.stackplot(range(len(grp5)),
-              [grp5[s] for s in cols5],
-              labels=cols5,
-              colors=colors5,
-              alpha=0.75)
+new_labels = [TIER_LABELS.get(t, t) for t in grp1.index]
+ax1.set_xticks(x1)
+ax1.set_xticklabels(new_labels, rotation=0, ha="center", fontsize=8)
+ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: f"RM {v/1000:.0f}k"))
+ax1.set_title("1 · Safe vs At-Risk Revenue by Risk Tier\n(X-axis indicates days since last order or account status)", fontsize=11, pad=15)
+ax1.set_ylabel("Revenue (RM)")
+ax1.legend(fontsize=8)
 
-step5 = max(1, len(grp5) // 12)
-ax5.set_xticks(range(0, len(grp5), step5))
-ax5.set_xticklabels(grp5.index[::step5], rotation=45, ha="right", fontsize=7)
-ax5.set_ylabel("Total Revenue (RM)")
-ax5.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'RM {x/1000:.0f}k'))
-ax5.set_title("5 · Monthly Revenue Stack by Status  (shrinking ACTIVE = churn signal)",
-              fontweight="bold")
-ax5.legend(loc="upper right")
-ax5.grid(axis="y", alpha=0.3)
+# =============================================================================
+# VIZ 2 — Horizontal bar: Probability-weighted Revenue at Risk by Cohort Year
+# =============================================================================
+ax2 = fig.add_subplot(gs[0, 1])
+grp2 = df.groupby("cohort_year")["revenue_at_risk"].sum().sort_index()
+colors2 = plt.cm.Reds(np.linspace(0.35, 0.90, len(grp2)))
+bars2 = ax2.barh(grp2.index.astype(str), grp2.values,
+                 color=colors2, edgecolor="white", height=0.6)
 
-# ── Save ─────────────────────────────────────────────────────────────────────
-plt.tight_layout(rect=[0, 0, 1, 0.98])
-out = os.path.join(os.path.dirname(__file__), "member_churn_dashboard.png")
+for bar, val in zip(bars2, grp2.values):
+    ax2.text(val + grp2.max() * 0.01, bar.get_y() + bar.get_height() / 2,
+             f"RM {val:,.0f}", va="center", fontsize=7.5)
+
+ax2.xaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: f"RM {v/1000:.0f}k"))
+ax2.set_title("2 · Expected Revenue at Risk by Cohort Year")
+ax2.set_xlabel("Weighted Revenue at Risk (RM)")
+ax2.set_xlim(0, grp2.max() * 1.20)
+ax2.invert_yaxis()
+
+# =============================================================================
+# VIZ 3 — Heatmap: Member Count by Cohort Year × Risk Tier
+# =============================================================================
+ax3 = fig.add_subplot(gs[1, 0])
+pivot3 = df.pivot_table(
+    index="cohort_year", columns="risk_tier",
+    values="member_count", aggfunc="sum", fill_value=0
+)
+pivot3 = pivot3.reindex(columns=[t for t in TIER_ORDER if t in pivot3.columns])
+
+im = ax3.imshow(pivot3.values, cmap="YlOrRd", aspect="auto")
+ax3.set_xticks(range(len(pivot3.columns)))
+ax3.set_xticklabels(pivot3.columns, rotation=30, ha="right", fontsize=8)
+ax3.set_yticks(range(len(pivot3.index)))
+ax3.set_yticklabels(pivot3.index.astype(str), fontsize=9)
+for row in range(len(pivot3.index)):
+    for col in range(len(pivot3.columns)):
+        val = int(pivot3.values[row, col])
+        if val > 0:
+            ax3.text(col, row, str(val),
+                     ha="center", va="center",
+                     fontsize=8, fontweight="bold",
+                     color="white" if pivot3.values[row, col] > pivot3.values.max() * 0.6 else "black")
+plt.colorbar(im, ax=ax3, label="Member Count", shrink=0.85)
+ax3.set_title("3 · Member Count Heatmap: Cohort Year × Risk Tier")
+
+# =============================================================================
+# VIZ 4 — Scatter: Churn Score vs Total Revenue (member-level)
+# =============================================================================
+ax4 = fig.add_subplot(gs[1, 1])
+for tier in TIER_ORDER:
+    sub = dfm[dfm["risk_tier"] == tier]
+    if sub.empty:
+        continue
+    ax4.scatter(
+        sub["total_revenue"], sub["churn_score"],
+        c=TIER_COLORS.get(tier, "grey"),
+        label=tier, alpha=0.72, s=38, edgecolors="white", linewidths=0.4
+    )
+
+ax4.xaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: f"RM {v/1000:.0f}k"))
+ax4.set_xlabel("Lifetime Total Revenue (RM)")
+ax4.set_ylabel("Churn Score (1–10)")
+ax4.set_title("4 · Churn Score vs Revenue — Win-Back Target Quadrant")
+ax4.axhline(y=3.0, color="grey", lw=0.8, ls="--", alpha=0.6)
+ax4.text(ax4.get_xlim()[1] * 0.7, 3.3,
+         "← High priority targets above this line →",
+         fontsize=6.5, color="grey", style="italic")
+ax4.legend(fontsize=7, markerscale=1.1, ncol=2, loc="upper left")
+
+# =============================================================================
+# VIZ 5 — Grouped bar: VIP vs NORMAL member count across Risk Tiers
+# =============================================================================
+ax5 = fig.add_subplot(gs[2, 0])
+grp5 = df.groupby(["risk_tier", "member_type"])["member_count"].sum().unstack(fill_value=0)
+grp5 = grp5.reindex([t for t in TIER_ORDER if t in grp5.index])
+x5   = np.arange(len(grp5))
+w5   = 0.35
+for i, mtype in enumerate(["VIP", "NORMAL"]):
+    if mtype in grp5.columns:
+        ax5.bar(x5 + i * w5, grp5[mtype], w5,
+                label=mtype, color=TYPE_COLORS[mtype], alpha=0.85)
+
+ax5.set_xticks(x5 + w5 / 2)
+ax5.set_xticklabels(grp5.index, rotation=25, ha="right", fontsize=8)
+ax5.set_ylabel("Member Count")
+ax5.set_title("5 · VIP vs NORMAL Member Count by Risk Tier")
+ax5.legend(fontsize=9)
+
+# =============================================================================
+# VIZ 6 — Stacked 100% bar: Revenue share by Risk Tier per Cohort Year
+# =============================================================================
+ax6 = fig.add_subplot(gs[2, 1])
+pivot6 = df.pivot_table(
+    index="cohort_year", columns="risk_tier",
+    values="total_revenue", aggfunc="sum", fill_value=0
+)
+pivot6 = pivot6.reindex(columns=[t for t in TIER_ORDER if t in pivot6.columns])
+pivot6_pct = pivot6.div(pivot6.sum(axis=1), axis=0) * 100
+
+bottom = np.zeros(len(pivot6_pct))
+for tier in pivot6_pct.columns:
+    vals = pivot6_pct[tier].values
+    ax6.bar(pivot6_pct.index.astype(str), vals, bottom=bottom,
+            label=tier, color=TIER_COLORS.get(tier, "grey"), alpha=0.85)
+    for j, (v, b) in enumerate(zip(vals, bottom)):
+        if v > 8:
+            ax6.text(j, b + v / 2, f"{v:.0f}%",
+                     ha="center", va="center", fontsize=7, fontweight="bold",
+                     color="white")
+    bottom += vals
+
+ax6.set_ylim(0, 100)
+ax6.set_ylabel("% of Cohort Revenue")
+ax6.set_xlabel("Cohort Year")
+ax6.set_title("6 · Revenue Share by Risk Tier per Cohort Year (100% Stacked)")
+ax6.legend(fontsize=7, loc="lower right", ncol=2)
+
+# ── Save ──────────────────────────────────────────────────────────────────────
+plt.tight_layout(rect=[0, 0, 1, 0.987])
+out = os.path.join(HERE, "churn_risk_dashboard_subplots.png")
 plt.savefig(out, dpi=150, bbox_inches="tight")
-print(f"Saved: {out}")
+print(f"Dashboard saved: {out}")
 plt.show()

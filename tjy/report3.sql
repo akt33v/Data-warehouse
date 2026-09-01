@@ -13,7 +13,7 @@ SET ECHO OFF
 SET FEEDBACK OFF
 SET VERIFY OFF
 SET PAGESIZE 50
-SET LINESIZE 100
+SET LINESIZE 120
 SET TRIMSPOOL ON
 SET TERMOUT ON
 
@@ -179,16 +179,18 @@ ORDER BY perf_quartile, total_revenue DESC;
 
 CLEAR BREAKS
 CLEAR COMPUTES
+CLEAR COLUMNS
+TTITLE OFF
+BTITLE OFF
 
--- =============================================================================
--- SECTION 5: INTERACTIVE DRILL-DOWN BY CATEGORY (ACCEPT)
--- =============================================================================
 PROMPT
 PROMPT ========================================================================
 ACCEPT user_category CHAR DEFAULT 'Chinese Cuisine' PROMPT 'Enter Restaurant Category for Drill Down (Press Enter for Chinese Cuisine): '
 
+SET TERMOUT OFF
 COLUMN cat_filter NEW_VALUE cat_filter NOPRINT
 SELECT '%' || UPPER(TRIM('&user_category')) || '%' AS cat_filter FROM DUAL;
+SET TERMOUT ON 
 
 COLUMN restaurant_name  HEADING 'Restaurant'          FORMAT A35
 COLUMN rating           HEADING 'Rating'              FORMAT 9.99

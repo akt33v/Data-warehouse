@@ -14,7 +14,7 @@ SET TRIMSPOOL ON
 SET COLSEP ''
 
 -- ── CSV 1: TIER SUMMARY BY QUARTER ────────────────────────────────────────────
-SPOOL menu_tier_summary.csv
+SPOOL htl/menu_tier_summary.csv
 
 PROMPT pv_quarter,item_category,meal_tier,deal_flag,item_type,qty_sold,revenue,avg_unit_price
 
@@ -47,7 +47,7 @@ ORDER BY pv_quarter, Item_Category, meal_tier;
 SPOOL OFF
 
 -- ── CSV 2: ITEM-LEVEL LIFETIME DETAIL ─────────────────────────────────────────
-SPOOL menu_item_detail.csv
+SPOOL htl/menu_item_detail.csv
 
 PROMPT item_name,item_category,meal_tier,deal_flag,item_type,qty_sold,revenue,avg_unit_price,cat_rank,price_quartile
 

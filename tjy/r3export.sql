@@ -5,7 +5,7 @@ SET LINESIZE 500
 SET TRIMSPOOL ON
 SET COLSEP ''
 
-SPOOL restaurant_performance.csv
+SPOOL tjy/restaurant_performance.csv
 
 PROMPT restaurant_name,category,halal_status,rating,location_area,yr_quarter,order_count,total_revenue,avg_order_value
 SELECT

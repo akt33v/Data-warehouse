@@ -14,7 +14,7 @@ SET TRIMSPOOL ON
 SET COLSEP ''
 
 -- ── CSV 1: QUARTER SUMMARY ────────────────────────────────────────────────────
-SPOOL voucher_quarter_summary.csv
+SPOOL htl/voucher_quarter_summary.csv
 
 PROMPT pv_quarter,voucher_type,day_flag,order_count,discount_given,gross_revenue,roi_multiple
 
@@ -46,7 +46,7 @@ ORDER BY pv_quarter, Voucher_Type;
 SPOOL OFF
 
 -- ── CSV 2: LIFETIME ROI RANKING ───────────────────────────────────────────────
-SPOOL voucher_lifetime_roi.csv
+SPOOL htl/voucher_lifetime_roi.csv
 
 PROMPT voucher_type,order_count,discount_given,gross_revenue,roi_multiple,roi_rank
 
