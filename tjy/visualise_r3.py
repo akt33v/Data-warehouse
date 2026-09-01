@@ -1,5 +1,5 @@
 """
-Report 6 Visualisations: Top Performing Restaurants & Rating Correlation
+Report 3 Visualisations: Top Performing Restaurants & Rating Correlation
 Data: restaurant_performance.csv
 Cols: restaurant_name, category, halal_status, rating, location_area,
       yr_quarter, order_count, total_revenue, avg_order_value
@@ -54,7 +54,10 @@ plt.colorbar(scatter, ax=ax1, label="Rating")
 ax1.set_xlabel("Restaurant Rating")
 ax1.set_ylabel("Total Revenue (RM)")
 ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'RM {x/1000:.0f}k'))
-ax1.set_title("1 - Rating vs Revenue (bubble = order volume)", fontweight="bold")
+ax1.set_title(
+    "(a) Rating vs Revenue by Restaurant, with Bubble Size Representing Order Volume",
+    fontweight="bold"
+)
 ax1.grid(alpha=0.3)
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -78,7 +81,10 @@ ax2.set_xticklabels([quarters[i] for i in range(0, len(quarters), step2)],
                      rotation=45, ha="right", fontsize=7)
 ax2.set_ylabel("Revenue (RM)")
 ax2.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'RM {x/1000:.0f}k'))
-ax2.set_title("2 - Revenue by Rating Tier per Quarter", fontweight="bold")
+ax2.set_title(
+    "(b) Quarterly Revenue by Restaurant Rating Tier",
+    fontweight="bold"
+)
 ax2.legend()
 ax2.grid(axis="y", alpha=0.3)
 
@@ -93,7 +99,10 @@ bars = ax3.barh(top10["restaurant_name"], top10["total_revenue"],
                 color=colors3, edgecolor="white")
 ax3.set_xlabel("Total Revenue (RM)")
 ax3.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'RM {x/1000:.0f}k'))
-ax3.set_title("3 - Top 10 Restaurants by Revenue (color = rating)", fontweight="bold")
+ax3.set_title(
+    "(c) Top 10 Restaurants by Revenue",
+    fontweight="bold"
+)
 ax3.invert_yaxis()
 ax3.grid(axis="x", alpha=0.3)
 
@@ -117,7 +126,10 @@ for patch, tier in zip(bp["boxes"], tiers_present):
     patch.set_facecolor(TIER_COLORS.get(tier, "grey"))
     patch.set_alpha(0.7)
 ax4.set_ylabel("Avg Order Value (RM)")
-ax4.set_title("4 - Avg Order Value Distribution by Rating Tier", fontweight="bold")
+ax4.set_title(
+    "(d) Average Order Value Distribution by Rating Tier",
+    fontweight="bold"
+)
 ax4.grid(axis="y", alpha=0.3)
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -138,7 +150,10 @@ ax5.set_xticks(range(0, len(grp5), step5))
 ax5.set_xticklabels(grp5.index[::step5], rotation=45, ha="right", fontsize=7)
 ax5.set_ylabel("Revenue (RM)")
 ax5.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'RM {x/1000:.0f}k'))
-ax5.set_title("5 - Quarterly Revenue by Top 5 Categories (Stacked Area)", fontweight="bold")
+ax5.set_title(
+    "(e) Quarterly Revenue by Top 5 Restaurant Categories",
+    fontweight="bold"
+)
 ax5.legend(loc="upper right", fontsize=8)
 ax5.grid(axis="y", alpha=0.3)
 
