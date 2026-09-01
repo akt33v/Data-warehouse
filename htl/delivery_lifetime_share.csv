@@ -1,0 +1,12 @@
+company_name,service_status,order_count,fee_revenue,market_share,share_rank
+LajuFood Rider,ACTIVE,388,2761.2,11.7,1
+SwiftDrop KL,ACTIVE,351,2721,11.6,2
+GoSend City,ACTIVE,349,2631.5,11.2,3
+EasyDrop Hub,ACTIVE,387,2612.2,11.1,4
+TapauRunner,ACTIVE,367,2508.4,10.7,5
+FlashRider MY,ACTIVE,370,2470,10.5,6
+Halo Courier Eats,ACTIVE,297,2228.4,9.5,7
+PandaMove Express,ACTIVE,279,2023.5,8.6,8
+Maju Dispatch,ACTIVE,289,1985.9,8.4,9
+RotiRoad Express,ACTIVE,226,1560,6.6,10
+N/A - Pickup Order,ACTIVE,697,0,0,11

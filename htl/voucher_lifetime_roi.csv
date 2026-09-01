@@ -1,0 +1,4 @@
+voucher_type,order_count,discount_given,gross_revenue,roi_multiple,roi_rank
+FIXED,2497,6477,279447.6,43.14,1
+FREE_DELIVERY,615,3190.2,64645.1,20.26,2
+PERCENT,888,12125.22,91596.48,7.55,3

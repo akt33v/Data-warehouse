@@ -1,0 +1,201 @@
+item_name,item_category,meal_tier,deal_flag,item_type,qty_sold,revenue,avg_unit_price,cat_rank,price_quartile
+"Gelato Matcha Frappe",Brewed Tea,PREMIUM,REGULAR,DRINK,224,4233.6,18.9,1,1
+"Spice Mango Lassi",Brewed Tea,PREMIUM,REGULAR,DRINK,245,3675,15,2,4
+"Kimchi Korean Grape Fizz",Brewed Tea,PREMIUM,REGULAR,DRINK,185,3219,17.4,3,1
+"Quick Lychee Fizz",Brewed Tea,PREMIUM,REGULAR,DRINK,172,2992.8,17.4,4,1
+"Leaf Mango Lassi",Brewed Tea,PREMIUM,REGULAR,DRINK,179,2971.4,16.6,5,2
+"Wok Soy Bean Milk",Brewed Tea,PREMIUM,REGULAR,DRINK,146,2540.4,17.4,6,2
+"Warisan Sirap Bandung Float",Brewed Tea,PREMIUM,REGULAR,DRINK,163,2445,15,7,4
+"Mori Yuzu Soda",Brewed Tea,PREMIUM,REGULAR,DRINK,159,2385,15,8,4
+"Basil Lemongrass Cooler",Brewed Tea,PREMIUM,REGULAR,DRINK,136,2366.4,17.4,9,1
+"Kampung Sirap Bandung Float",Brewed Tea,PREMIUM,REGULAR,DRINK,140,2324,16.6,10,2
+"Smoke Sparkling Apple Soda",Brewed Tea,PREMIUM,REGULAR,DRINK,131,2174.6,16.6,11,3
+"Boba Lemon Mint Soda",Brewed Tea,PREMIUM,REGULAR,DRINK,128,2112,16.5,12,3
+"Tokyo Yuzu Soda",Brewed Tea,PREMIUM,REGULAR,DRINK,127,2108.2,16.6,13,2
+"Urban Sparkling Apple Soda",Brewed Tea,PREMIUM,REGULAR,DRINK,118,1770,15,14,4
+"Sweet Matcha Frappe",Brewed Tea,PREMIUM,REGULAR,DRINK,98,1695.4,17.3,15,2
+"Seoul Korean Grape Fizz",Brewed Tea,PREMIUM,REGULAR,DRINK,101,1595.8,15.8,16,3
+"Tarik Lemon Mint Soda",Brewed Tea,PREMIUM,REGULAR,DRINK,84,1520.4,18.1,17,1
+"Siam Lemongrass Cooler",Brewed Tea,PREMIUM,REGULAR,DRINK,83,1311.4,15.8,18,4
+"Sprint Lychee Fizz",Brewed Tea,PREMIUM,REGULAR,DRINK,81,1279.8,15.8,19,3
+"DimSum Soy Bean Milk",Brewed Tea,PREMIUM,REGULAR,DRINK,67,1058.6,15.8,20,3
+"Quick Loaded Cheese Fries",Burgers and Wraps,PREMIUM,REGULAR,FOOD,317,6213.2,19.6,1,3
+"Urban Smoked BBQ Lamb",Burgers and Wraps,PREMIUM,REGULAR,FOOD,264,5913.6,22.4,2,1
+"Smoke Smoked BBQ Lamb",Burgers and Wraps,PREMIUM,REGULAR,FOOD,219,4555.2,20.8,3,2
+"Sprint Loaded Cheese Fries",Burgers and Wraps,PREMIUM,REGULAR,FOOD,150,2700,18,4,4
+"Spice Maggi Goreng Mamak",Chicken Specials,PREMIUM,REGULAR,FOOD,168,2620.8,15.6,1,2
+"Kimchi Ramyeon Cheese Pot",Chicken Specials,PREMIUM,REGULAR,FOOD,133,2234.4,16.8,2,1
+"Gelato Chocolate Lava Cup",Chicken Specials,PREMIUM,REGULAR,FOOD,139,1918.2,13.8,3,4
+"Warisan Mee Rebus Johor",Chicken Specials,PREMIUM,REGULAR,FOOD,119,1856.4,15.6,4,2
+"Quick Spicy Chicken Wrap",Chicken Specials,PREMIUM,REGULAR,FOOD,124,1835.2,14.8,5,3
+"Boba Mushroom Toastie",Chicken Specials,PREMIUM,REGULAR,FOOD,46,671.6,14.6,6,3
+"Sprint Spicy Chicken Wrap",Chicken Specials,PREMIUM,REGULAR,FOOD,33,541.2,16.4,7,1
+"Sweet Chocolate Lava Cup",Chicken Specials,PREMIUM,REGULAR,FOOD,35,539,15.4,8,2
+"Kampung Mee Rebus Johor",Chicken Specials,PREMIUM,REGULAR,FOOD,33,462,14,9,4
+"Leaf Maggi Goreng Mamak",Chicken Specials,PREMIUM,REGULAR,FOOD,31,434,14,10,3
+"Seoul Ramyeon Cheese Pot",Chicken Specials,PREMIUM,REGULAR,FOOD,20,368,18.4,11,1
+"Tarik Mushroom Toastie",Chicken Specials,PREMIUM,REGULAR,FOOD,21,273,13,12,4
+"Gelato Croffle Berry Cream",Desserts,PREMIUM,REGULAR,FOOD,133,2447.2,18.4,1,1
+"Sweet Croffle Berry Cream",Desserts,PREMIUM,REGULAR,FOOD,64,1075.2,16.8,2,2
+"Gelato Vanilla Cream Puff",Desserts,BUDGET,REGULAR,FOOD,123,984,8,3,4
+"Sweet Vanilla Cream Puff",Desserts,BUDGET,REGULAR,FOOD,101,969.6,9.6,4,3
+"Basil Thai Milk Tea",Hot Coffee,PREMIUM,ON DEAL,DRINK,275,4290,15.6,1,2
+"Tokyo Matcha Latte",Hot Coffee,PREMIUM,ON DEAL,DRINK,285,4218,14.8,2,3
+"Kimchi Citron Honey Tea",Hot Coffee,PREMIUM,ON DEAL,DRINK,255,3978,15.6,3,2
+"Wok Chrysanthemum Tea",Hot Coffee,PREMIUM,ON DEAL,DRINK,232,3619.2,15.6,4,2
+"Warisan Teh Ais Limau",Hot Coffee,PREMIUM,ON DEAL,DRINK,203,3329.2,16.4,5,2
+"Leaf Teh Tarik Kaw",Hot Coffee,PREMIUM,ON DEAL,DRINK,218,3226.4,14.8,6,4
+"Spice Teh Tarik Kaw",Hot Coffee,PREMIUM,ON DEAL,DRINK,192,3148.8,16.4,7,1
+"Gelato Strawberry Milk",Hot Coffee,PREMIUM,ON DEAL,DRINK,177,3026.7,17.1,8,1
+"Smoke Mocha Latte",Hot Coffee,PREMIUM,ON DEAL,DRINK,170,2516,14.8,9,3
+"Kampung Teh Ais Limau",Hot Coffee,PREMIUM,ON DEAL,DRINK,157,2323.6,14.8,10,3
+"Boba Brown Sugar Boba",Hot Coffee,PREMIUM,ON DEAL,DRINK,129,2309.1,17.9,11,1
+"Tarik Brown Sugar Boba",Hot Coffee,PREMIUM,ON DEAL,DRINK,138,2249.4,16.3,12,2
+"Quick Iced Cola Float",Hot Coffee,PREMIUM,ON DEAL,DRINK,128,1996.8,15.6,13,3
+"Sweet Strawberry Milk",Hot Coffee,PREMIUM,ON DEAL,DRINK,113,1751.5,15.5,14,3
+"Urban Mocha Latte",Hot Coffee,PREMIUM,ON DEAL,DRINK,105,1722,16.4,15,1
+"Siam Thai Milk Tea",Hot Coffee,PREMIUM,ON DEAL,DRINK,110,1540,14,16,4
+"Mori Matcha Latte",Hot Coffee,PREMIUM,ON DEAL,DRINK,91,1492.4,16.4,17,1
+"Seoul Citron Honey Tea",Hot Coffee,PREMIUM,ON DEAL,DRINK,104,1456,14,18,4
+"Sprint Iced Cola Float",Hot Coffee,PREMIUM,ON DEAL,DRINK,86,1204,14,19,4
+"DimSum Chrysanthemum Tea",Hot Coffee,PREMIUM,ON DEAL,DRINK,82,1148,14,20,4
+"Basil Pad Kra Pao Chicken",Noodles,PREMIUM,ON DEAL,FOOD,231,3465,15,1,3
+"Urban Creamy Mushroom Pasta",Noodles,PREMIUM,ON DEAL,FOOD,137,2438.6,17.8,2,1
+"Siam Pad Kra Pao Chicken",Noodles,PREMIUM,ON DEAL,FOOD,128,2124.8,16.6,3,2
+"Wok Kung Pao Chicken Bowl",Noodles,PREMIUM,REGULAR,FOOD,133,1968.4,14.8,4,4
+"Basil Pad Thai Prawn",Noodles,PREMIUM,REGULAR,FOOD,124,1835.2,14.8,5,4
+"Wok Ginger Scallion Chicken Rice",Noodles,PREMIUM,ON DEAL,FOOD,122,1830,15,6,4
+"Smoke Buttermilk Rice Bowl",Noodles,PREMIUM,REGULAR,FOOD,105,1680,16,7,3
+"Tokyo Shoyu Ramen",Noodles,PREMIUM,REGULAR,FOOD,104,1664,16,8,3
+"Smoke Creamy Mushroom Pasta",Noodles,PREMIUM,ON DEAL,FOOD,50,970,19.4,9,1
+"Mori Shoyu Ramen",Noodles,PREMIUM,REGULAR,FOOD,54,950.4,17.6,10,1
+"DimSum Ginger Scallion Chicken Rice",Noodles,PREMIUM,ON DEAL,FOOD,47,780.2,16.6,11,2
+"Urban Buttermilk Rice Bowl",Noodles,PREMIUM,REGULAR,FOOD,43,756.8,17.6,12,1
+"Siam Pad Thai Prawn",Noodles,PREMIUM,REGULAR,FOOD,46,754.4,16.4,13,2
+"DimSum Kung Pao Chicken Bowl",Noodles,PREMIUM,REGULAR,FOOD,25,410,16.4,14,2
+"Leaf Masala Lime Soda",Refreshing Drinks,PREMIUM,REGULAR,DRINK,268,4931.2,18.4,1,1
+"Smoke Iced Chocolate",Refreshing Drinks,PREMIUM,REGULAR,DRINK,240,4416,18.4,2,1
+"Gelato Peach Tea Sparkler",Refreshing Drinks,PREMIUM,REGULAR,DRINK,243,4252.5,17.5,3,2
+"Spice Masala Lime Soda",Refreshing Drinks,PREMIUM,REGULAR,DRINK,248,4166.4,16.8,4,3
+"Basil Coconut Shake",Refreshing Drinks,PREMIUM,REGULAR,DRINK,227,3632,16,5,3
+"Kampung Air Jagung Madu",Refreshing Drinks,PREMIUM,REGULAR,DRINK,182,3348.8,18.4,6,1
+"Kimchi Iced Peach Ade",Refreshing Drinks,PREMIUM,REGULAR,DRINK,209,3344,16,7,3
+"Tarik Passionfruit Cooler",Refreshing Drinks,PREMIUM,REGULAR,DRINK,164,3263.6,19.9,8,1
+"Sweet Peach Tea Sparkler",Refreshing Drinks,PREMIUM,REGULAR,DRINK,168,3208.8,19.1,9,1
+"Boba Hazelnut Cappuccino",Refreshing Drinks,PREMIUM,REGULAR,DRINK,199,2845.7,14.3,10,4
+"Gelato Caramel Frappe",Refreshing Drinks,PREMIUM,REGULAR,DRINK,172,2631.6,15.3,11,4
+"Warisan Air Jagung Madu",Refreshing Drinks,PREMIUM,REGULAR,DRINK,146,2452.8,16.8,12,2
+"Boba Passionfruit Cooler",Refreshing Drinks,PREMIUM,REGULAR,DRINK,133,2433.9,18.3,13,1
+"Boba Americano",Refreshing Drinks,PREMIUM,REGULAR,DRINK,160,2224,13.9,14,4
+"Urban Iced Chocolate",Refreshing Drinks,PREMIUM,REGULAR,DRINK,125,2100,16.8,15,2
+"Wok Plum Lime Cooler",Refreshing Drinks,PREMIUM,REGULAR,DRINK,131,2096,16,16,3
+"Seoul Iced Peach Ade",Refreshing Drinks,PREMIUM,REGULAR,DRINK,113,1988.8,17.6,17,1
+"Boba Classic Milk Tea",Refreshing Drinks,PREMIUM,REGULAR,DRINK,121,1948.1,16.1,18,3
+"Tokyo Hojicha Milk Tea",Refreshing Drinks,PREMIUM,REGULAR,DRINK,102,1876.8,18.4,19,1
+"Tarik Classic Milk Tea",Refreshing Drinks,PREMIUM,REGULAR,DRINK,129,1870.5,14.5,20,4
+"Mori Hojicha Milk Tea",Refreshing Drinks,PREMIUM,REGULAR,DRINK,104,1747.2,16.8,21,2
+"Quick Lemon Tea Cooler",Refreshing Drinks,PREMIUM,REGULAR,DRINK,102,1632,16,22,3
+"DimSum Plum Lime Cooler",Refreshing Drinks,PREMIUM,REGULAR,DRINK,78,1372.8,17.6,23,2
+"Siam Coconut Shake",Refreshing Drinks,PREMIUM,REGULAR,DRINK,76,1337.6,17.6,24,2
+"Sprint Lemon Tea Cooler",Refreshing Drinks,PREMIUM,REGULAR,DRINK,70,1232,17.6,25,2
+"Tarik Hazelnut Cappuccino",Refreshing Drinks,PREMIUM,REGULAR,DRINK,76,1208.4,15.9,26,3
+"Sweet Caramel Frappe",Refreshing Drinks,PREMIUM,REGULAR,DRINK,50,845,16.9,27,2
+"Tarik Americano",Refreshing Drinks,PREMIUM,REGULAR,DRINK,47,578.1,12.3,28,4
+"Tarik Caramel Latte",Refreshing Drinks,PREMIUM,REGULAR,DRINK,39,549.9,14.1,29,4
+"Boba Caramel Latte",Refreshing Drinks,PREMIUM,REGULAR,DRINK,31,387.5,12.5,30,4
+"Wok Salted Egg Fish Fillet",Seafood Specials,PREMIUM,REGULAR,FOOD,294,5762.4,19.6,1,2
+"Leaf Tandoori Chicken Set",Seafood Specials,PREMIUM,REGULAR,FOOD,303,5696.4,18.8,2,3
+"Kampung Ayam Penyet Sambal Hijau",Seafood Specials,PREMIUM,REGULAR,FOOD,283,5320.4,18.8,3,3
+"Tokyo Ebi Tempura Set",Seafood Specials,PREMIUM,REGULAR,FOOD,241,5012.8,20.8,4,1
+"Mori Ebi Tempura Set",Seafood Specials,PREMIUM,REGULAR,FOOD,214,4793.6,22.4,5,1
+"Basil Green Curry Seafood",Seafood Specials,PREMIUM,REGULAR,FOOD,237,4645.2,19.6,6,2
+"Spice Tandoori Chicken Set",Seafood Specials,PREMIUM,REGULAR,FOOD,187,3814.8,20.4,7,1
+"Warisan Ayam Penyet Sambal Hijau",Seafood Specials,PREMIUM,REGULAR,FOOD,187,3814.8,20.4,7,1
+"Smoke Fish and Chips",Seafood Specials,PREMIUM,REGULAR,FOOD,171,3522.6,20.6,9,1
+"Kimchi Yangnyeom Chicken",Seafood Specials,PREMIUM,REGULAR,FOOD,158,3412.8,21.6,10,1
+"DimSum Salted Egg Fish Fillet",Seafood Specials,PREMIUM,REGULAR,FOOD,186,3348,18,11,3
+"Gelato Tiramisu Dessert Jar",Seafood Specials,PREMIUM,REGULAR,FOOD,169,3143.4,18.6,12,3
+"Siam Green Curry Seafood",Seafood Specials,PREMIUM,REGULAR,FOOD,144,2592,18,13,4
+"Wok Yee Mee Soup",Seafood Specials,PREMIUM,REGULAR,FOOD,131,2541.4,19.4,14,2
+"Basil Thai Basil Beef",Seafood Specials,PREMIUM,REGULAR,FOOD,131,2541.4,19.4,14,2
+"Spice Prawn Masala Bowl",Seafood Specials,PREMIUM,REGULAR,FOOD,149,2533,17,16,4
+"Kimchi Dakgalbi Rice Set",Seafood Specials,PREMIUM,REGULAR,FOOD,114,2439.6,21.4,17,1
+"Urban Fish and Chips",Seafood Specials,PREMIUM,REGULAR,FOOD,123,2337,19,18,2
+"Quick Popcorn Chicken Bucket",Seafood Specials,PREMIUM,REGULAR,FOOD,120,2328,19.4,19,2
+"Warisan Set Ikan Bakar Cili",Seafood Specials,PREMIUM,REGULAR,FOOD,109,1853,17,20,4
+"DimSum Yee Mee Soup",Seafood Specials,PREMIUM,REGULAR,FOOD,96,1708.8,17.8,21,4
+"Seoul Yangnyeom Chicken",Seafood Specials,PREMIUM,REGULAR,FOOD,85,1700,20,22,2
+"Mori Mentai Chicken Rice",Seafood Specials,PREMIUM,REGULAR,FOOD,83,1577,19,23,3
+"Sweet Tiramisu Dessert Jar",Seafood Specials,PREMIUM,REGULAR,FOOD,64,1088,17,24,4
+"Leaf Prawn Masala Bowl",Seafood Specials,PREMIUM,REGULAR,FOOD,58,1078.8,18.6,25,3
+"Kampung Set Ikan Bakar Cili",Seafood Specials,PREMIUM,REGULAR,FOOD,40,744,18.6,26,3
+"Tokyo Mentai Chicken Rice",Seafood Specials,PREMIUM,REGULAR,FOOD,35,721,20.6,27,1
+"Seoul Dakgalbi Rice Set",Seafood Specials,PREMIUM,REGULAR,FOOD,34,673.2,19.8,28,2
+"Siam Thai Basil Beef",Seafood Specials,PREMIUM,REGULAR,FOOD,32,569.6,17.8,29,4
+"Sprint Popcorn Chicken Bucket",Seafood Specials,PREMIUM,REGULAR,FOOD,23,409.4,17.8,30,4
+"Kampung Nasi Lemak Rendang Daging",Signature Rice,PREMIUM,ON DEAL,FOOD,297,5167.8,17.4,1,1
+"Mori Salmon Teriyaki Bento",Signature Rice,PREMIUM,ON DEAL,FOOD,269,4788.2,17.8,2,1
+"Tokyo Salmon Teriyaki Bento",Signature Rice,PREMIUM,ON DEAL,FOOD,237,4597.8,19.4,3,1
+"Quick Double Beef Burger",Signature Rice,PREMIUM,ON DEAL,FOOD,283,4245,15,4,3
+"Tarik Chicken Slice Croissant",Signature Rice,PREMIUM,ON DEAL,FOOD,244,4001.6,16.4,5,2
+"Spice Banana Leaf Chicken Curry",Signature Rice,BUDGET,ON DEAL,FOOD,301,3913,13,6,4
+"Sprint Double Beef Burger",Signature Rice,PREMIUM,ON DEAL,FOOD,226,3751.6,16.6,7,1
+"Kimchi Bibimbap Bulgogi Bowl",Signature Rice,BUDGET,ON DEAL,FOOD,179,3114.6,17.4,8,1
+"Kimchi Kimchi Fried Rice",Signature Rice,PREMIUM,ON DEAL,FOOD,174,2958,17,9,1
+"Leaf Mutton Varuval Rice",Signature Rice,PREMIUM,ON DEAL,FOOD,169,2940.6,17.4,10,1
+"Warisan Nasi Lemak Rendang Daging",Signature Rice,PREMIUM,ON DEAL,FOOD,181,2859.8,15.8,11,2
+"Quick Crispy Chicken Burger",Signature Rice,BUDGET,ON DEAL,FOOD,176,2710.4,15.4,12,2
+"Boba Chicken Slice Croissant",Signature Rice,PREMIUM,ON DEAL,FOOD,175,2590,14.8,13,3
+"Gelato Burnt Cheesecake Slice",Signature Rice,PREMIUM,ON DEAL,FOOD,160,2240,14,14,3
+"Gelato Belgian Waffle Stack",Signature Rice,BUDGET,ON DEAL,FOOD,153,2203.2,14.4,15,3
+"Wok Cantonese Kuey Teow",Signature Rice,BUDGET,ON DEAL,FOOD,140,2156,15.4,16,2
+"Seoul Kimchi Fried Rice",Signature Rice,PREMIUM,ON DEAL,FOOD,115,2139,18.6,17,1
+"Urban Grilled Chicken Chop",Signature Rice,BUDGET,ON DEAL,FOOD,131,1965,15,18,3
+"Basil Tom Yum Fried Rice",Signature Rice,BUDGET,ON DEAL,FOOD,127,1955.8,15.4,19,2
+"Tokyo Chicken Katsu Don",Signature Rice,BUDGET,ON DEAL,FOOD,115,1909,16.6,20,1
+"Smoke Grilled Chicken Chop",Signature Rice,BUDGET,ON DEAL,FOOD,111,1842.6,16.6,21,2
+"Warisan Nasi Kukus Ayam Berempah",Signature Rice,BUDGET,ON DEAL,FOOD,141,1833,13,22,4
+"Boba Butter Kaya Toast",Signature Rice,BUDGET,ON DEAL,FOOD,146,1752,12,23,4
+"Leaf Banana Leaf Chicken Curry",Signature Rice,BUDGET,ON DEAL,FOOD,106,1547.6,14.6,24,3
+"Mori Chicken Katsu Don",Signature Rice,BUDGET,ON DEAL,FOOD,96,1440,15,25,3
+"Spice Mutton Varuval Rice",Signature Rice,PREMIUM,ON DEAL,FOOD,82,1295.6,15.8,26,2
+"Siam Tom Yum Fried Rice",Signature Rice,BUDGET,ON DEAL,FOOD,64,883.2,13.8,27,4
+"Sweet Burnt Cheesecake Slice",Signature Rice,PREMIUM,ON DEAL,FOOD,56,873.6,15.6,28,2
+"Kampung Nasi Kukus Ayam Berempah",Signature Rice,BUDGET,ON DEAL,FOOD,50,730,14.6,29,3
+"Sweet Belgian Waffle Stack",Signature Rice,BUDGET,ON DEAL,FOOD,56,716.8,12.8,30,4
+"Tarik Butter Kaya Toast",Signature Rice,BUDGET,ON DEAL,FOOD,44,598.4,13.6,31,4
+"Sprint Crispy Chicken Burger",Signature Rice,BUDGET,ON DEAL,FOOD,40,552,13.8,32,4
+"Seoul Bibimbap Bulgogi Bowl",Signature Rice,BUDGET,ON DEAL,FOOD,33,521.4,15.8,33,2
+"DimSum Cantonese Kuey Teow",Signature Rice,BUDGET,ON DEAL,FOOD,24,331.2,13.8,34,4
+"Tokyo Tamago Sando",Snacks and Sides,BUDGET,REGULAR,FOOD,288,3859.2,13.4,1,1
+"Smoke Loaded Potato Wedges",Snacks and Sides,BUDGET,REGULAR,FOOD,208,2787.2,13.4,2,1
+"Wok Dim Sum Basket",Snacks and Sides,BUDGET,REGULAR,FOOD,295,2655,9,3,3
+"Leaf Roti Canai Double",Snacks and Sides,BUDGET,REGULAR,FOOD,225,2565,11.4,4,1
+"Kimchi Tteokbokki Box",Snacks and Sides,BUDGET,REGULAR,FOOD,231,2541,11,5,2
+"Urban Loaded Potato Wedges",Snacks and Sides,BUDGET,REGULAR,FOOD,212,2501.6,11.8,6,1
+"Quick Mayo Shrimp Roll",Snacks and Sides,BUDGET,REGULAR,FOOD,266,2394,9,7,3
+"Basil Mango Sticky Rice Cup",Snacks and Sides,BUDGET,REGULAR,FOOD,211,1899,9,8,4
+"Warisan Soto Ayam Special",Snacks and Sides,BUDGET,REGULAR,FOOD,191,1871.8,9.8,9,3
+"Sprint Mayo Shrimp Roll",Snacks and Sides,BUDGET,REGULAR,FOOD,149,1579.4,10.6,10,2
+"Mori Takoyaki Tray",Snacks and Sides,BUDGET,REGULAR,FOOD,149,1579.4,10.6,10,2
+"Spice Vadai Snack Plate",Snacks and Sides,BUDGET,REGULAR,FOOD,174,1496.4,8.6,12,4
+"Quick Curly Fries Snack",Snacks and Sides,BUDGET,REGULAR,FOOD,191,1489.8,7.8,13,4
+"Mori Tamago Sando",Snacks and Sides,BUDGET,REGULAR,FOOD,119,1404.2,11.8,14,1
+"Kimchi Seaweed Fries",Snacks and Sides,BUDGET,REGULAR,FOOD,136,1332.8,9.8,15,2
+"Kampung Soto Ayam Special",Snacks and Sides,BUDGET,REGULAR,FOOD,112,1276.8,11.4,16,1
+"Wok Spring Roll Bites",Snacks and Sides,BUDGET,REGULAR,FOOD,160,1248,7.8,17,4
+"Smoke Chicken Caesar Wrap",Snacks and Sides,BUDGET,REGULAR,FOOD,136,1224,9,18,3
+"Siam Mango Sticky Rice Cup",Snacks and Sides,BUDGET,REGULAR,FOOD,114,1208.4,10.6,19,2
+"Urban Chicken Caesar Wrap",Snacks and Sides,BUDGET,REGULAR,FOOD,114,1208.4,10.6,19,2
+"Warisan Keropok Lekor Cup",Snacks and Sides,BUDGET,REGULAR,FOOD,139,1195.4,8.6,21,4
+"Basil Thai Fish Cake",Snacks and Sides,BUDGET,REGULAR,FOOD,144,1123.2,7.8,22,4
+"Seoul Tteokbokki Box",Snacks and Sides,BUDGET,REGULAR,FOOD,89,1121.4,12.6,23,1
+"Tokyo Takoyaki Tray",Snacks and Sides,BUDGET,REGULAR,FOOD,122,1098,9,24,3
+"Sprint Curly Fries Snack",Snacks and Sides,BUDGET,REGULAR,FOOD,96,902.4,9.4,25,3
+"Siam Thai Fish Cake",Snacks and Sides,BUDGET,REGULAR,FOOD,92,864.8,9.4,26,3
+"DimSum Spring Roll Bites",Snacks and Sides,BUDGET,REGULAR,FOOD,89,836.6,9.4,27,3
+"Kampung Keropok Lekor Cup",Snacks and Sides,BUDGET,REGULAR,FOOD,114,798,7,28,4
+"Spice Roti Canai Double",Snacks and Sides,BUDGET,REGULAR,FOOD,81,793.8,9.8,29,2
+"Seoul Seaweed Fries",Snacks and Sides,BUDGET,REGULAR,FOOD,64,729.6,11.4,30,1
+"DimSum Dim Sum Basket",Snacks and Sides,BUDGET,REGULAR,FOOD,62,657.2,10.6,31,2
+"Leaf Vadai Snack Plate",Snacks and Sides,BUDGET,REGULAR,FOOD,58,406,7,32,4

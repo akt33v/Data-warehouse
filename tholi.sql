@@ -1,0 +1,3 @@
+CONNECT / AS SYSDBA
+ALTER SESSION SET CURRENT_SCHEMA = SGRAB;
+@dim_date_holidays.sql
