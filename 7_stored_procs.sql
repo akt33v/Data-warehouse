@@ -296,10 +296,147 @@ BEGIN
 END sp_sync_dim_menu_item;
 /
 
-PROMPT ======= Stored procedures compiled: sp_sync_dim_member, sp_sync_dim_menu_item =======;
+PROMPT ======= Stored procedures compiled: sp_sync_dim_member, sp_sync_dim_menu_item, sp_sync_dim_restaurant =======;
 
--- Verify both compiled without errors
+-- ============================================================================
+-- PROCEDURE: sp_sync_dim_restaurant
+-- Source    : vw_stg_restaurant
+-- Strategy  : SCD Type 2
+--   - New business key         -> INSERT version 1 (effective = SYSDATE)
+--   - Existing, changed attrs  -> expire current + INSERT new version (effective = today)
+--     Tracked SCD2 attrs: rating, restaurant_name, category, halal_status, location_area
+--   - Existing, unchanged      -> no write
+--   - Invalid row              -> log to etl_rejected_rows, skip
+-- ============================================================================
+CREATE OR REPLACE PROCEDURE sp_sync_dim_restaurant AS
+    v_exists    NUMBER;
+    v_changed   NUMBER;
+    v_new       NUMBER := 0;
+    v_upd       NUMBER := 0;
+    v_skip      NUMBER := 0;
+    v_batch_id  NUMBER;
+    v_err_msg   VARCHAR2(400);
+BEGIN
+    -- Register batch
+    SELECT etl_batch_id_seq.NEXTVAL INTO v_batch_id FROM dual;
+    INSERT INTO etl_batch_control (batch_id, source_name, batch_status, row_count)
+    VALUES (v_batch_id, 'RESTAURANT', 'PENDING',
+            (SELECT COUNT(*) FROM vw_stg_restaurant));
+    COMMIT;
+
+    FOR r IN (SELECT * FROM vw_stg_restaurant) LOOP
+
+        -- Layer 2 business-rule validation
+        IF r.restaurant_id IS NULL OR r.restaurant_name IS NULL
+           OR r.category IS NULL OR r.rating NOT BETWEEN 0 AND 5
+        THEN
+            INSERT INTO etl_rejected_rows (
+                reject_id, batch_id, source_name, source_row_ref,
+                reject_reason, validation_rule, raw_snapshot
+            ) VALUES (
+                etl_reject_id_seq.NEXTVAL, v_batch_id, 'RESTAURANT',
+                'restaurant_id=' || NVL(TO_CHAR(r.restaurant_id), 'NULL'),
+                CASE
+                    WHEN r.restaurant_id   IS NULL THEN 'NULL restaurant_id'
+                    WHEN r.restaurant_name IS NULL THEN 'NULL restaurant_name'
+                    WHEN r.category        IS NULL THEN 'NULL category'
+                    ELSE 'Rating out of range 0-5'
+                END,
+                'NULL_REQUIRED_FIELD',
+                'id='     || NVL(TO_CHAR(r.restaurant_id), 'NULL')
+                || '|name='   || NVL(r.restaurant_name, 'NULL')
+                || '|cat='    || NVL(r.category,         'NULL')
+                || '|rating=' || NVL(TO_CHAR(r.rating),  'NULL')
+            );
+            v_skip := v_skip + 1;
+            CONTINUE;
+        END IF;
+
+        SAVEPOINT sp_rest;
+        BEGIN
+            SELECT COUNT(*) INTO v_exists
+            FROM dim_restaurant
+            WHERE restaurant_id = r.restaurant_id AND current_flag = 'Y';
+
+            IF v_exists = 0 THEN
+                -- Brand-new restaurant: insert version 1
+                INSERT INTO dim_restaurant (
+                    restaurant_key, restaurant_id, restaurant_name, category,
+                    halal_status, rating, location_area,
+                    effective_date, expiry_date, current_flag
+                ) VALUES (
+                    dim_rest_seq.NEXTVAL, r.restaurant_id, r.restaurant_name, r.category,
+                    r.halal_status, r.rating, r.location_area,
+                    TRUNC(SYSDATE), DATE '9999-12-31', 'Y'
+                );
+                v_new := v_new + 1;
+            ELSE
+                -- Existing: check for any tracked attribute change
+                SELECT COUNT(*) INTO v_changed
+                FROM dim_restaurant
+                WHERE restaurant_id = r.restaurant_id AND current_flag = 'Y'
+                  AND (NVL(rating,           -1)  <> NVL(r.rating,          -1)
+                       OR NVL(restaurant_name,'~') <> NVL(r.restaurant_name, '~')
+                       OR NVL(category,       '~') <> NVL(r.category,        '~')
+                       OR NVL(halal_status,   '~') <> NVL(r.halal_status,    '~')
+                       OR NVL(location_area,  '~') <> NVL(r.location_area,   '~'));
+
+                IF v_changed > 0 THEN
+                    -- Expire current version
+                    UPDATE dim_restaurant
+                       SET expiry_date  = TRUNC(SYSDATE) - 1,
+                           current_flag = 'N'
+                     WHERE restaurant_id = r.restaurant_id AND current_flag = 'Y';
+
+                    -- Insert new version
+                    INSERT INTO dim_restaurant (
+                        restaurant_key, restaurant_id, restaurant_name, category,
+                        halal_status, rating, location_area,
+                        effective_date, expiry_date, current_flag
+                    ) VALUES (
+                        dim_rest_seq.NEXTVAL, r.restaurant_id, r.restaurant_name, r.category,
+                        r.halal_status, r.rating, r.location_area,
+                        TRUNC(SYSDATE), DATE '9999-12-31', 'Y'
+                    );
+                    v_upd := v_upd + 1;
+                END IF;
+            END IF;
+
+        EXCEPTION
+            WHEN OTHERS THEN
+                v_err_msg := SUBSTR(SQLERRM, 1, 400);
+                ROLLBACK TO sp_rest;
+                INSERT INTO etl_rejected_rows (
+                    reject_id, batch_id, source_name, source_row_ref,
+                    reject_reason, validation_rule, raw_snapshot
+                ) VALUES (
+                    etl_reject_id_seq.NEXTVAL, v_batch_id, 'RESTAURANT',
+                    'restaurant_id=' || r.restaurant_id,
+                    v_err_msg,
+                    'DB_CONSTRAINT_ERROR',
+                    'id=' || r.restaurant_id || '|name=' || r.restaurant_name
+                    || '|rating=' || r.rating
+                );
+                v_skip := v_skip + 1;
+        END;
+    END LOOP;
+
+    -- Finalise batch record
+    UPDATE etl_batch_control
+       SET batch_status   = 'PROCESSED',
+           valid_count    = v_new + v_upd,
+           rejected_count = v_skip,
+           processed_date = SYSDATE
+     WHERE batch_id = v_batch_id AND source_name = 'RESTAURANT';
+    COMMIT;
+
+    DBMS_OUTPUT.PUT_LINE('DIM_RESTAURANT: ' || v_new || ' new, '
+        || v_upd || ' updated (SCD2), ' || v_skip || ' rejected.');
+END sp_sync_dim_restaurant;
+/
+
+-- Verify all compiled without errors
 SELECT object_name, status
 FROM user_objects
 WHERE object_type = 'PROCEDURE'
-  AND object_name IN ('SP_SYNC_DIM_MEMBER', 'SP_SYNC_DIM_MENU_ITEM');
+  AND object_name IN ('SP_SYNC_DIM_MEMBER', 'SP_SYNC_DIM_MENU_ITEM', 'SP_SYNC_DIM_RESTAURANT');

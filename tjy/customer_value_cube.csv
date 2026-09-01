@@ -1,3 +1,4 @@
+cohort_year,member_type,restaurant_cat,order_count,total_revenue,avg_order_value
 2016,NORMAL,"Beverage House",22,2286.2,103.92
 2016,NORMAL,"Chinese Cuisine",77,6694.53,86.94
 2016,NORMAL,"Dessert Cafe",69,6596.15,95.6
@@ -195,4 +196,3 @@
 2025,VIP,"Malay Cuisine",2,169.68,84.84
 2025,VIP,"Thai Kitchen",2,278.9,139.45
 2025,VIP,"Western Grill",1,116.08,116.08
-cohort_year,member_type,restaurant_cat,order_count,total_revenue,avg_order_value

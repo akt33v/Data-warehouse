@@ -79,7 +79,7 @@ FROM (
 ) voucher_sales
 ORDER BY total_discount_rm DESC;
 SPOOL OFF;
-
+SET HEADING ON;
 SET TERMOUT ON;
 PROMPT CSV export complete:
 PROMPT order_fulfilment_delivery_performance.csv

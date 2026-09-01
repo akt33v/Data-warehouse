@@ -108,8 +108,12 @@ CREATE TABLE dim_restaurant (
     Halal_Status        VARCHAR2(10)    NOT NULL,
     Rating               NUMBER(3,2)     NOT NULL,
     Location_Area       VARCHAR2(120),
+    Effective_Date      DATE            NOT NULL,
+    Expiry_Date         DATE            DEFAULT DATE '9999-12-31' NOT NULL,
+    Current_Flag        CHAR(1)         DEFAULT 'Y' NOT NULL,
     CONSTRAINT CK_Dim_Rest_Halal        CHECK (Halal_Status IN ('HALAL', 'NON_HALAL')),
-    CONSTRAINT CK_Dim_Rest_Rating       CHECK (Rating BETWEEN 0 AND 5)
+    CONSTRAINT CK_Dim_Rest_Rating       CHECK (Rating BETWEEN 0 AND 5),
+    CONSTRAINT CK_Dim_Rest_Flag         CHECK (Current_Flag IN ('Y','N'))
 );
 
 -- =============================================================================

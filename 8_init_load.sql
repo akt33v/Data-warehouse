@@ -82,31 +82,11 @@ EXEC sp_sync_dim_member;
 
 -- ============================================================================
 -- PART 3: DIM_RESTAURANT, source: VW_STG_RESTAURANT
--- MERGE (SCD Type 1). View already filters invalid rows; MERGE USING adds a
--- final guard on rating range as a safety net.
+-- SCD Type 2 load via stored procedure (same proc used by incremental runs).
 -- ============================================================================
-PROMPT ======= Loading DIM_RESTAURANT... =======;
-MERGE INTO dim_restaurant tgt
-USING (
-    SELECT * FROM vw_stg_restaurant
-    WHERE restaurant_id   IS NOT NULL
-      AND restaurant_name IS NOT NULL
-      AND rating BETWEEN 0 AND 5
-) src
-ON (tgt.restaurant_id = src.restaurant_id)
-WHEN MATCHED THEN UPDATE SET
-    tgt.restaurant_name = src.restaurant_name,
-    tgt.category        = src.category,
-    tgt.halal_status    = src.halal_status,
-    tgt.rating          = src.rating,
-    tgt.location_area   = src.location_area
-WHEN NOT MATCHED THEN INSERT (
-    restaurant_key, restaurant_id, restaurant_name, category, halal_status, rating, location_area
-) VALUES (
-    dim_rest_seq.NEXTVAL, src.restaurant_id, src.restaurant_name, src.category,
-    src.halal_status, src.rating, src.location_area
-);
-COMMIT;
+PROMPT ======= Loading DIM_RESTAURANT (SCD2)... =======;
+EXEC sp_sync_dim_restaurant;
+
 
 PROMPT ======= Loading DIM_MENU_ITEM (SCD2)... =======;
 EXEC sp_sync_dim_menu_item;

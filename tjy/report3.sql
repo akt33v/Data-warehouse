@@ -46,6 +46,7 @@ SELECT
 FROM
     Fact_Order_Sales f
     JOIN dim_restaurant r ON f.Restaurant_Key = r.Restaurant_Key
+                         AND r.Current_Flag = 'Y'
 GROUP BY
     r.Category,
     r.Restaurant_Name,
@@ -82,6 +83,7 @@ FROM (
     FROM
         Fact_Order_Sales f
         JOIN dim_restaurant r ON f.Restaurant_Key = r.Restaurant_Key
+                             AND r.Current_Flag = 'Y'
         JOIN Dim_Date       d ON f.Date_Key       = d.Date_Key
 )
 PIVOT (
@@ -115,6 +117,7 @@ WITH top_rated_qtr AS (
     FROM
         Fact_Order_Sales f
         JOIN dim_restaurant r ON f.Restaurant_Key = r.Restaurant_Key
+                             AND r.Current_Flag = 'Y'
         JOIN Dim_Date       d ON f.Date_Key       = d.Date_Key
     WHERE
         r.Rating >= 4.0
@@ -163,6 +166,7 @@ WITH rest_lifetime AS (
     FROM
         Fact_Order_Sales f
         JOIN dim_restaurant r ON f.Restaurant_Key = r.Restaurant_Key
+                             AND r.Current_Flag = 'Y'
     GROUP BY
         r.Restaurant_Name,
         r.Category,
@@ -207,6 +211,9 @@ BREAK ON REPORT ON restaurant_name SKIP 1
 COMPUTE SUM LABEL 'Restaurant Total' OF order_count total_revenue ON restaurant_name
 COMPUTE SUM LABEL 'Grand Total'      OF order_count total_revenue ON REPORT
 
+-- Section 5: NO Current_Flag filter — f.Restaurant_Key already points to the
+-- dim_restaurant version that was active when the order was placed (SCD2).
+-- This gives the rating that was in effect during that specific quarter.
 SELECT
     r.Restaurant_Name                                               AS restaurant_name,
     r.Rating                                                        AS rating,

@@ -42,29 +42,11 @@ EXEC sp_sync_dim_member;
 
 -- ============================================================================
 -- PART 2: DIM_RESTAURANT, source: VW_STG_RESTAURANT
+-- SCD Type 2 load via stored procedure (same proc used by initial load).
 -- ============================================================================
-PROMPT ======= Syncing DIM_RESTAURANT... =======;
-MERGE INTO dim_restaurant tgt
-USING vw_stg_restaurant src
-ON (tgt.restaurant_id = src.restaurant_id)
-WHEN MATCHED THEN UPDATE SET
-    tgt.restaurant_name = src.restaurant_name,
-    tgt.category = src.category,
-    tgt.halal_status = src.halal_status,
-    tgt.rating = src.rating,
-    tgt.location_area = src.location_area
-  WHERE tgt.restaurant_name <> src.restaurant_name
-     OR tgt.category <> src.category
-     OR tgt.halal_status <> src.halal_status
-     OR tgt.rating <> src.rating
-     OR NVL(tgt.location_area,'~') <> NVL(src.location_area,'~')
-WHEN NOT MATCHED THEN INSERT (
-    restaurant_key, restaurant_id, restaurant_name, category, halal_status, rating, location_area
-) VALUES (
-    dim_rest_seq.NEXTVAL, src.restaurant_id, src.restaurant_name, src.category,
-    src.halal_status, src.rating, src.location_area
-);
-COMMIT;
+PROMPT ======= Syncing DIM_RESTAURANT (SCD2)... =======;
+EXEC sp_sync_dim_restaurant;
+
 
 -- ============================================================================
 -- PART 3: DIM_MENU_ITEM (SCD Type 2), source: VW_STG_MENU_ITEM
