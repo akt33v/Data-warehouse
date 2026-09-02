@@ -190,7 +190,32 @@ BTITLE OFF
 PROMPT
 PROMPT ========================================================================
 ACCEPT user_category CHAR DEFAULT 'Chinese Cuisine' PROMPT 'Enter Restaurant Category for Drill Down (Press Enter for Chinese Cuisine): '
+-- COLUMN restaurant_category FORMAT A20 HEADING 'RESTAURANT CATEGORY'
+-- COLUMN quarter             FORMAT A10 HEADING 'QUARTER'
+-- COLUMN total_orders        FORMAT 999 HEADING 'TOTAL ORDERS'
+-- COLUMN total_revenue_rm    FORMAT 999,999,990.00 HEADING 'TOTAL REVENUE (RM)'
 
+-- WITH latest_quarter AS (
+--     SELECT MAX(TO_CHAR(d.Year_Number) || '-Q' || TO_CHAR(d.Quarter_Number)) AS max_qtr
+--     FROM Fact_Order_Sales f
+--     JOIN Dim_Date d ON f.Date_Key = d.Date_Key
+-- )
+-- SELECT 
+--     r.Category                                                  AS restaurant_category,
+--     TO_CHAR(d.Year_Number) || '-Q' || TO_CHAR(d.Quarter_Number) AS quarter,
+--     COUNT(DISTINCT f.Order_ID)                                  AS total_orders,
+--     ROUND(SUM(f.Total_Amount), 2)                               AS total_revenue_rm
+-- FROM 
+--     Fact_Order_Sales f
+--     JOIN dim_restaurant r ON f.Restaurant_Key = r.Restaurant_Key
+--     JOIN Dim_Date       d ON f.Date_Key       = d.Date_Key
+--     JOIN latest_quarter lq ON (TO_CHAR(d.Year_Number) || '-Q' || TO_CHAR(d.Quarter_Number)) = lq.max_qtr
+-- GROUP BY 
+--     r.Category,
+--     d.Year_Number,
+--     d.Quarter_Number
+-- ORDER BY 
+--     total_revenue_rm DESC;
 SET TERMOUT OFF
 COLUMN cat_filter NEW_VALUE cat_filter NOPRINT
 SELECT '%' || UPPER(TRIM('&user_category')) || '%' AS cat_filter FROM DUAL;
