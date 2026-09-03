@@ -1,6 +1,3 @@
-
-"""Create visualizations from the three ShopGrab CSV exports."""
-
 from __future__ import annotations
 
 import argparse
@@ -10,17 +7,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-# ==========================================================
-# PATHS
-# ==========================================================
-
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = BASE_DIR / "visualizations"
 
-
-# ==========================================================
-# LOAD CSV
-# ==========================================================
 
 def load_csv(filename: str) -> pd.DataFrame:
     """Load an exported CSV and raise a useful error when it is missing."""
@@ -42,9 +31,6 @@ def load_csv(filename: str) -> pd.DataFrame:
 
 def save_delivery_chart(data: pd.DataFrame) -> plt.Figure:
 
-    # ==========================================================
-    # PREPARE DATA
-    # ==========================================================
 
     # Orders by delivery company across years
     yearly_orders = data.pivot(
@@ -197,7 +183,6 @@ def save_delivery_chart(data: pd.DataFrame) -> plt.Figure:
         fontsize=12,
     )
 
-    # Same legend under Chart 2
     legend_handles = [
         plt.Rectangle(
             (0, 0),
@@ -266,7 +251,6 @@ def save_delivery_chart(data: pd.DataFrame) -> plt.Figure:
         fontsize=11,
     )
 
-    # Extra space above highest point
     max_fee = average_fees["AVERAGE_DELIVERY_FEE_RM"].max()
 
     axes[2].set_ylim(
@@ -315,8 +299,8 @@ def save_payment_chart(data: pd.DataFrame) -> plt.Figure:
     # PREPARE DATA
     # ==========================================================
 
-    transaction_totals = (
-        data.set_index("PAYMENT_METHOD")["TOTAL_TRANSACTIONS"]
+    order_totals = (
+        data.set_index("PAYMENT_METHOD")["TOTAL_ORDERS"]
     )
 
     sales_totals = (
@@ -351,27 +335,27 @@ def save_payment_chart(data: pd.DataFrame) -> plt.Figure:
     )
 
     # ==========================================================
-    # CHART 1 — TRANSACTIONS
+    # CHART 1 — ORDERS
     # Highest → Lowest
     # ==========================================================
 
-    transaction_data = transaction_totals.sort_values(
+    order_data = order_totals.sort_values(
         ascending=False
     )
 
-    transaction_colors = [
+    order_colors = [
         payment_colors[method]
-        for method in transaction_data.index
+        for method in order_data.index
     ]
 
     axes[0].bar(
-        transaction_data.index,
-        transaction_data.values,
-        color=transaction_colors,
+        order_data.index,
+        order_data.values,
+        color=order_colors,
     )
 
     axes[0].set_title(
-        "Transactions by Payment Method",
+        "Orders by Payment Method",
         fontsize=13,
     )
 
@@ -381,7 +365,7 @@ def save_payment_chart(data: pd.DataFrame) -> plt.Figure:
     )
 
     axes[0].set_ylabel(
-        "Number of Transactions",
+        "Number of Orders",
         fontsize=11,
     )
 
@@ -390,11 +374,10 @@ def save_payment_chart(data: pd.DataFrame) -> plt.Figure:
         rotation=45,
     )
 
-    # Add values above bars
-    for index, value in enumerate(transaction_data.values):
+    for index, value in enumerate(order_data.values):
         axes[0].text(
             index,
-            value + max(transaction_data.values) * 0.01,
+            value + max(order_data.values) * 0.01,
             str(int(value)),
             ha="center",
             va="bottom",
@@ -441,7 +424,6 @@ def save_payment_chart(data: pd.DataFrame) -> plt.Figure:
         rotation=45,
     )
 
-    # Add sales values above bars
     for index, value in enumerate(sales_data.values):
         axes[1].text(
             index,
@@ -473,7 +455,7 @@ def save_payment_chart(data: pd.DataFrame) -> plt.Figure:
     )
 
     axes[2].set_title(
-        "Successful Transaction Rate",
+        "Successful Order Payment Rate",
         fontsize=13,
     )
 
@@ -513,7 +495,7 @@ def save_payment_chart(data: pd.DataFrame) -> plt.Figure:
     # ==========================================================
 
     figure.suptitle(
-        "Payment Method & Transaction Behaviour",
+        "Payment Method & Order Behaviour",
         fontsize=16,
     )
 
@@ -524,7 +506,7 @@ def save_payment_chart(data: pd.DataFrame) -> plt.Figure:
     # ==========================================================
 
     figure.savefig(
-        OUTPUT_DIR / "payment_method_transaction_behaviour.png",
+        OUTPUT_DIR / "payment_method_order_behaviour.png",
         dpi=150,
         bbox_inches="tight",
     )
@@ -576,7 +558,6 @@ def save_voucher_chart(data: pd.DataFrame) -> plt.Figure:
         for index in range(len(top_vouchers))
     ]
 
-    # Reverse the data so highest appears at the TOP
     top_vouchers_plot = top_vouchers.iloc[::-1]
     voucher_colors_plot = voucher_colors[::-1]
 
@@ -586,7 +567,6 @@ def save_voucher_chart(data: pd.DataFrame) -> plt.Figure:
         color=voucher_colors_plot,
     )
 
-    # Add total discount value at end of every bar
     max_discount = top_vouchers_plot["TOTAL_DISCOUNT_RM"].max()
 
     for index, value in enumerate(
@@ -616,7 +596,6 @@ def save_voucher_chart(data: pd.DataFrame) -> plt.Figure:
         fontsize=11,
     )
 
-    # Add some space on the right for labels
     axes[0].set_xlim(
         0,
         max_discount * 1.18,
@@ -672,28 +651,18 @@ def save_voucher_chart(data: pd.DataFrame) -> plt.Figure:
 
     return figure
 
-
-# ==========================================================
-# MAIN
-# ==========================================================
-
 def main(show: bool) -> None:
 
-    # Create output folder
     OUTPUT_DIR.mkdir(
         exist_ok=True
     )
-
-    # ==========================================================
-    # LOAD CSV FILES
-    # ==========================================================
 
     delivery = load_csv(
         "order_fulfilment_delivery_performance.csv"
     )
 
     payment = load_csv(
-        "payment_method_transaction_behaviour.csv"
+        "payment_method_order_behaviour.csv"
     )
 
     voucher = load_csv(
@@ -710,10 +679,6 @@ def main(show: bool) -> None:
         save_voucher_chart(voucher),
     ]
 
-    # ==========================================================
-    # PRINT OUTPUT LOCATION
-    # ==========================================================
-
     print(
         f"Visualizations saved to {OUTPUT_DIR}"
     )
@@ -725,17 +690,9 @@ def main(show: bool) -> None:
     if show:
         plt.show()
 
-    # ==========================================================
-    # CLOSE FIGURES
-    # ==========================================================
-
     for figure in figures:
         plt.close(figure)
 
-
-# ==========================================================
-# PROGRAM ENTRY POINT
-# ==========================================================
 
 if __name__ == "__main__":
 

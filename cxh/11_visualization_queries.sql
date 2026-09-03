@@ -1,7 +1,3 @@
--- SHOPGRAB VISUALIZATION QUERIES
--- Run each SELECT separately in Oracle SQL Developer.
--- Source: FACT_ORDER_SALES joined to warehouse dimensions.
-
 SET LINESIZE 220;
 SET PAGESIZE 100;
 SET TAB OFF;
@@ -18,10 +14,9 @@ COLUMN delivery_company        FORMAT A25            HEADING 'DELIVERY COMPANY';
 COLUMN total_delivery_fees_rm  FORMAT 999,999,990.00 HEADING 'TOTAL DELIVERY FEES (RM)';
 COLUMN average_delivery_fee_rm FORMAT 999,999,990.00 HEADING 'AVERAGE DELIVERY FEE (RM)';
 COLUMN payment_method          FORMAT A15            HEADING 'PAYMENT METHOD';
-COLUMN total_transactions      FORMAT 999,999        HEADING 'TOTAL TRANSACTIONS';
-COLUMN successful_transactions FORMAT 999,999        HEADING 'SUCCESSFUL TRANSACTIONS';
-COLUMN failed_transactions     FORMAT 999,999        HEADING 'FAILED TRANSACTIONS';
-COLUMN refunded_transactions   FORMAT 999,999        HEADING 'REFUNDED TRANSACTIONS';
+COLUMN successful_orders       FORMAT 999,999        HEADING 'SUCCESSFUL ORDERS';
+COLUMN failed_orders           FORMAT 999,999        HEADING 'FAILED ORDERS';
+COLUMN refunded_orders         FORMAT 999,999        HEADING 'REFUNDED ORDERS';
 COLUMN voucher_code            FORMAT A20            HEADING 'VOUCHER CODE';
 COLUMN voucher_type            FORMAT A15            HEADING 'VOUCHER TYPE';
 COLUMN revenue_rm              FORMAT 999,999,990.00 HEADING 'REVENUE (RM)';
@@ -55,25 +50,24 @@ ORDER BY d.year_number, total_orders DESC;
 
 PROMPT;
 PROMPT ============================================================================;
-PROMPT PAYMENT METHOD AND TRANSACTION BEHAVIOUR;
+PROMPT PAYMENT METHOD AND ORDER BEHAVIOUR;
 PROMPT ============================================================================;
 SELECT
     p.payment_method AS payment_method,
-    COUNT(DISTINCT f.order_id) AS total_transactions,
+    COUNT(DISTINCT f.order_id) AS total_orders,
     ROUND(SUM(f.total_amount), 2) AS total_sales_rm,
     COUNT(DISTINCT CASE WHEN p.payment_status = 'SUCCESS' THEN f.order_id END)
-        AS successful_transactions,
+        AS successful_orders,
     COUNT(DISTINCT CASE WHEN p.payment_status = 'FAILED' THEN f.order_id END)
-        AS failed_transactions,
+        AS failed_orders,
     COUNT(DISTINCT CASE WHEN p.payment_status = 'REFUNDED' THEN f.order_id END)
-        AS refunded_transactions,
+        AS refunded_orders,
     ROUND(COUNT(DISTINCT CASE WHEN p.payment_status = 'SUCCESS' THEN f.order_id END) /
         NULLIF(COUNT(DISTINCT f.order_id), 0) * 100, 2) AS success_rate
 FROM fact_order_sales f
-JOIN dim_date d ON d.date_key = f.date_key
 JOIN dim_payment p ON p.payment_key = f.payment_key
 GROUP BY p.payment_method
-ORDER BY total_transactions DESC;
+ORDER BY total_orders DESC;
 
 PROMPT;
 PROMPT ============================================================================;

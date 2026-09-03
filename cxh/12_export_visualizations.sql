@@ -1,7 +1,3 @@
--- SHOPGRAB VISUALIZATION CSV EXPORTS
--- Run in Oracle SQL Developer with Run Script (F5).
--- Outputs are written directly to the warehouse folder.
-
 SET TERMOUT OFF;
 SET FEEDBACK OFF;
 SET VERIFY OFF;
@@ -11,7 +7,7 @@ SET LINESIZE 32767;
 SET TRIMSPOOL ON;
 SET MARKUP CSV OFF;
 
-SPOOL 'cxh/order_fulfilment_delivery_performance.csv' REPLACE;
+SPOOL 'C:\Users\JAYDEN\Desktop\warehouse2\order_fulfilment_delivery_performance.csv' REPLACE;
 SELECT 'YEAR,DELIVERY_COMPANY,TOTAL_ORDERS,TOTAL_SALES_RM,TOTAL_DELIVERY_FEES_RM,AVERAGE_DELIVERY_FEE_RM,OVERALL_TOTAL_ORDERS' FROM dual;
 SELECT
     TO_CHAR(d.year_number) || ',' ||
@@ -31,8 +27,8 @@ GROUP BY d.year_number, dc.company_name
 ORDER BY d.year_number, COUNT(DISTINCT f.order_id) DESC;
 SPOOL OFF;
 
-SPOOL 'cxh/payment_method_transaction_behaviour.csv' REPLACE;
-SELECT 'PAYMENT_METHOD,TOTAL_TRANSACTIONS,TOTAL_SALES_RM,SUCCESSFUL_TRANSACTIONS,FAILED_TRANSACTIONS,REFUNDED_TRANSACTIONS,SUCCESS_RATE' FROM dual;
+SPOOL 'C:\Users\JAYDEN\Desktop\warehouse2\payment_method_order_behaviour.csv' REPLACE;
+SELECT 'PAYMENT_METHOD,TOTAL_ORDERS,TOTAL_SALES_RM,SUCCESSFUL_ORDERS,FAILED_ORDERS,REFUNDED_ORDERS,SUCCESS_RATE' FROM dual;
 SELECT
     '"' || REPLACE(p.payment_method, '"', '""') || '",' ||
     TO_CHAR(COUNT(DISTINCT f.order_id)) || ',' ||
@@ -50,7 +46,7 @@ GROUP BY p.payment_method
 ORDER BY COUNT(DISTINCT f.order_id) DESC;
 SPOOL OFF;
 
-SPOOL 'cxh/voucher_promotion_effectiveness.csv' REPLACE;
+SPOOL 'C:\Users\JAYDEN\Desktop\warehouse2\voucher_promotion_effectiveness.csv' REPLACE;
 SELECT 'VOUCHER_CODE,VOUCHER_TYPE,TOTAL_ORDERS,REVENUE_RM,TOTAL_DISCOUNT_RM,AVERAGE_DISCOUNT_RM,TOP_10,BUBBLE_SIZE' FROM dual;
 SELECT
     '"' || REPLACE(voucher_code, '"', '""') || '",' ||
@@ -79,9 +75,9 @@ FROM (
 ) voucher_sales
 ORDER BY total_discount_rm DESC;
 SPOOL OFF;
-SET HEADING ON;
+
 SET TERMOUT ON;
 PROMPT CSV export complete:
 PROMPT order_fulfilment_delivery_performance.csv
-PROMPT payment_method_transaction_behaviour.csv
+PROMPT payment_method_order_behaviour.csv
 PROMPT voucher_promotion_effectiveness.csv
